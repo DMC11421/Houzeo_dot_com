@@ -20,7 +20,7 @@ $color-light-gray: #999999;
 $color-border: #E0E0E0;
 $color-border-light: #E5E5E5;
 $color-bg-light: #f8f8f8;
-$color-success: #4CAF50;
+$color-success: #00B67B;
 $color-info: #2196F3;
 $color-warning: #FF9800;
 $color-search-btn: #0B5AA5;
@@ -58,6 +58,7 @@ $radius-sm: 4px;
 $radius-md: 6px;
 $radius-lg: 8px;
 $radius-xl: 12px;
+$radius-xxl: 16px;
 $radius-full: 500px;
 $radius-circle: 50%;
 
@@ -157,90 +158,108 @@ body {
 header {
     background-color: $color-white;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 0 $space-5xl;
-}
+    padding: 0 $space-2xl;
 
-.header-container {
-    @include container;
-    @include flex-between;
-    height: 74px;
-}
+    .header-container {
+        @include container;
+        @include flex-between;
+        height: 74px;
 
-.logo {
-    img {
-        height: 30px;
-        display: block;
+        .bi-list {
+            display: none;
+        }
+
+        .logo {
+            img {
+                height: 30px;
+                display: block;
+            }
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: $space-3xl;
+            flex: 1;
+            justify-content: center;
+            margin-left: $space-6xl;
+
+            .nav-link {
+                @include font-style($font-size-base, $font-weight-regular);
+                letter-spacing: 0%;
+                color: $color-dark-black;
+                text-decoration: none;
+                white-space: nowrap;
+                @include transition(color);
+
+                &:hover {
+                    color: $color-primary;
+                }
+
+                .dropdown-icon {
+                    font-size: 10px;
+                    margin-left: $space-xs;
+                }
+            }
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: $space-xl;
+
+            .phone-info {
+                text-align: left;
+
+                .phone-number {
+                    @include font-style($font-size-base, $font-weight-regular);
+                    color: $color-dark-black;
+                }
+
+                .phone-hours {
+                    @include font-style($font-size-sm, $font-weight-regular);
+                    color: $color-dark-black;
+                    margin-top: $space-sm;
+                }
+            }
+
+            .cta-button {
+                width: 154px;
+                height: 38px;
+                @include gradient-primary;
+                border: none;
+                border-radius: $radius-lg;
+                @include font-style($font-size-base, $font-weight-medium);
+                letter-spacing: 0%;
+                color: $color-white;
+                cursor: pointer;
+                @include transition(opacity);
+
+                &:hover {
+                    opacity: 0.9;
+                }
+
+                &:active {
+                    opacity: 0.8;
+                }
+            }
+
+            .bi-person-circle {
+                display: none;
+            }
+        }
     }
 }
 
-.nav-menu {
-    display: flex;
-    align-items: center;
-    gap: $space-3xl;
-    flex: 1;
-    justify-content: center;
-    margin-left: $space-6xl;
-}
 
-.nav-link {
-    @include font-style($font-size-base, $font-weight-regular);
-    letter-spacing: 0%;
-    color: $color-dark-black;
-    text-decoration: none;
-    white-space: nowrap;
-    @include transition(color);
 
-    &:hover {
-        color: $color-primary;
-    }
-}
 
-.dropdown-icon {
-    font-size: 10px;
-    margin-left: $space-xs;
-}
 
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: $space-xl;
-}
 
-.phone-info {
-    text-align: left;
-}
 
-.phone-number {
-    @include font-style($font-size-base, $font-weight-regular);
-    color: $color-dark-black;
-}
 
-.phone-hours {
-    @include font-style($font-size-sm, $font-weight-regular);
-    color: $color-dark-black;
-    margin-top: $space-sm;
-}
 
-.cta-button {
-    width: 154px;
-    height: 38px;
-    @include gradient-primary;
-    border: none;
-    border-radius: $radius-lg;
-    @include font-style($font-size-base, $font-weight-medium);
-    letter-spacing: 0%;
-    color: $color-white;
-    cursor: pointer;
-    @include transition(opacity);
 
-    &:hover {
-        opacity: 0.9;
-    }
-
-    &:active {
-        opacity: 0.8;
-    }
-}
 
 
 // ============================================================================
@@ -501,11 +520,17 @@ header {
 
 .property-card {
     background-color: $color-white;
-    border: 1px solid $color-border-light;
-    border-radius: $radius-xl;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: $radius-xxl;
     overflow: hidden;
-    @include transition(box-shadow);
+    @include transition(all);
     @include hover-shadow;
+
+    &:hover {
+        // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 20px 0px #0000001A;
+
+    }
 }
 
 .property-image-wrapper {
@@ -523,13 +548,15 @@ header {
 
 .days-badge {
     position: absolute;
-    top: $space-sm;
-    left: $space-sm;
-    background-color: rgba(0, 0, 0, 0.75);
-    color: $color-white;
-    @include font-style($font-size-sm, $font-weight-regular);
+    top: $space-lg;
+    left: $space-lg;
+    background-color: $color-white;
+    color: $color-dark-black;
+    @include font-style($font-size-sm, $font-weight-medium);
     padding: 6px 12px;
     border-radius: $radius-full;
+    box-shadow: 0px 4px 10px 0px #00000026;
+
 }
 
 .favorite-btn {
@@ -545,12 +572,26 @@ header {
     @include transition(background-color);
 
     &:hover {
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.5);
+
+        svg path {
+            fill: red;
+            /* fill heart on hover */
+            stroke: red;
+            /* optional: stroke also red */
+        }
     }
 
     svg {
         width: 24px;
         height: 24px;
+
+        path {
+            fill: transparent;
+            /* default: no fill */
+            stroke: white;
+            transition: fill 0.25s ease, stroke 0.25s ease;
+        }
     }
 }
 
@@ -586,6 +627,40 @@ header {
     display: flex;
 }
 
+.property-badge {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px 8px;
+    border-radius: 100px;
+
+    .status-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: $radius-circle;
+        display: block;
+        margin-right: 5px;
+
+        &.status-house {
+            background-color: $color-success;
+        }
+
+        &.status-condo {
+            background-color: $color-info;
+        }
+
+        &.status-multi {
+            background-color: $color-warning;
+        }
+    }
+
+    .type-text {
+        @include font-style($font-size-sm, $font-weight-regular);
+        color: $color-dark-black;
+        flex: 1;
+    }
+}
+
 .property-details {
     padding: $space-lg;
 }
@@ -593,40 +668,19 @@ header {
 .property-type {
     display: flex;
     align-items: center;
-    gap: $space-sm;
+    justify-content: space-between;
+    // gap: $space-sm;
     margin-bottom: $space-md;
 }
 
-.status-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: $radius-circle;
 
-    &.status-house {
-        background-color: $color-success;
-    }
-
-    &.status-condo {
-        background-color: $color-info;
-    }
-
-    &.status-multi {
-        background-color: $color-warning;
-    }
-}
-
-.type-text {
-    @include font-style($font-size-md, $font-weight-regular);
-    color: $color-dark-gray;
-    flex: 1;
-}
 
 .view-count {
     display: flex;
     align-items: center;
     gap: $space-xs;
-    @include font-style($font-size-md, $font-weight-regular);
-    color: $color-dark-gray;
+    @include font-style($font-size-sm, $font-weight-regular);
+    color: $color-dark-black;
 
     svg {
         width: 16px;
@@ -634,35 +688,181 @@ header {
     }
 }
 
-.property-price {
-    @include font-style($font-size-2xl, $font-weight-semibold);
-    color: $color-black;
-    margin-bottom: $space-md;
-}
-
-.property-specs {
+.property-price-spec {
     display: flex;
-    gap: $space-lg;
-    margin-bottom: $space-md;
-}
+    align-items: center;
+    justify-content: space-between;
 
-.spec {
-    @include font-style($font-size-base, $font-weight-regular);
-    color: $color-dark-gray;
-
-    strong {
-        font-weight: $font-weight-semibold;
-        color: $color-black;
+    .property-price {
+        @include font-style($font-size-xl, $font-weight-semibold);
+        color: $color-search-btn;
+        margin-bottom: $space-md;
     }
+
+    .property-specs {
+        display: flex;
+        gap: $space-lg;
+        margin-bottom: $space-md;
+
+        .spec {
+            @include font-style($font-size-sm, $font-weight-regular);
+            color: rgba(0, 0, 0, 0.5);
+            display: flex;
+
+            strong {
+                font-weight: $font-weight-semibold;
+                font-size: 14px;
+                color: $color-search-btn;
+            }
+        }
+    }
+
 }
 
 .property-address {
-    @include font-style($font-size-base, $font-weight-regular);
+    @include font-style($font-size-sm, $font-weight-regular);
     color: $color-black;
     margin-bottom: $space-sm;
 }
 
 .property-agent {
     @include font-style($font-size-sm, $font-weight-regular);
-    color: $color-light-gray;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+hr {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.map-button {
+    display: none;
+}
+
+@media only screen and (max-width: 430px) {
+    header {
+        padding: 0 16px;
+
+        .header-container {
+            .bi-list {
+                display: block;
+                font-size: 27px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .header-right {
+
+                .cta-button,
+                .phone-info {
+                    display: none;
+                }
+
+                .bi-person-circle {
+                    display: block;
+                    font-size: 27px;
+                }
+            }
+        }
+    }
+
+    .search-section {
+        padding: 20px 16px;
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+
+        .search-container {
+            flex-wrap: wrap;
+
+            .search-field-wrapper {
+                .search-field {
+                    width: 304px;
+                }
+            }
+
+            .filter-icon-wrapper {
+                height: 38px;
+                width: 38px;
+                border: 1px solid $color-search-btn;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+
+                i {
+                    color: $color-search-btn;
+
+                    &::after {
+                        content: "2";
+                        height: 14px;
+                        width: 14px;
+                        background-color: #0B5AA5;
+                        color: #ffffff;
+                        display: flex;
+                        position: absolute;
+                        top: -4px;
+                        left: 24px;
+                        border-radius: 50%;
+                        font-size: 8px;
+                        border: 1px solid #fff;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+
+            .filters-wrapper {
+                .filter-dropdown {
+                    width: calc((100% - 16px) / 2);
+
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                        display: none;
+                    }
+                }
+
+                .filters-btn,
+                .saved-btn {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .main-content-section {
+        .map-listings-container {
+            .map-wrapper {
+                display: none;
+            }
+
+            .listings-wrapper {
+                .listings-grid {
+                    grid-template-columns: 1fr;
+                    gap: 16px;
+                }
+            }
+        }
+    }
+
+    .map-button {
+        display: block;
+        position: fixed;
+        bottom: 24px;
+        left: 38.5%;
+        background: #0B5AA5;
+        box-shadow: 0px 4px 14px 0px #0B5AA580;
+        border: none;
+        height: 48px;
+        width: 100px;
+        border-radius: 100px;
+        color: #ffffff;
+    }
 }
