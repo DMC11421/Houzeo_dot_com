@@ -17,6 +17,7 @@
     <title>Houzeo | Austin TX Real Estate & Homes for Sale</title>
     <link rel="icon" href="/assets/Houzeo_logo.png">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/scss/Houzeo.css">
@@ -56,7 +57,7 @@
                 <input type="text" class="search-field" placeholder="Austin, TX" value="Austin, TX">
                 <button class="clear-btn">✕</button>
                 <button class="search-btn">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="13" height="13" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z"
                             stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -66,22 +67,17 @@
                 </button>
             </div>
             <div class="filters-wrapper">
-                <button class="filter-dropdown">For Sale <span class="dropdown-arrow">▼</span></button>
-                <button class="filter-dropdown">Price <span class="dropdown-arrow">▼</span></button>
-                <button class="filter-dropdown">Beds & Baths <span class="dropdown-arrow">▼</span></button>
-                <button class="filter-dropdown">Property Type <span class="dropdown-arrow">▼</span></button>
+                <button class="filter-dropdown"><span>For Sale</span> <span class="dropdown-arrow">▼</span></button>
+                <button class="filter-dropdown"><span>Price</span> <span class="dropdown-arrow">▼</span></button>
+                <button class="filter-dropdown"><span>Beds & Baths</span> <span class="dropdown-arrow">▼</span></button>
+                <button class="filter-dropdown"><span>Property Type</span> <span
+                        class="dropdown-arrow">▼</span></button>
                 <button class="filters-btn">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 6H15M5 10H13M7 14H11" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" />
-                    </svg>
+                    <i class="bi bi-sliders"></i>
                     Filters
                 </button>
                 <button class="saved-btn">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14 2H4C3.44772 2 3 2.44772 3 3V16L9 13L15 16V3C15 2.44772 14.5523 2 14 2Z"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                    <i class="bi bi-pencil-fill"></i>
                     Saved
                 </button>
             </div>
@@ -94,11 +90,11 @@
                 <div id="map"></div>
             </div>
             <div class="listings-wrapper">
+                <div class="listings-title">
+                    <h2>Austin, TX real estate & homes for sale</h2>
+                </div>
                 <div class="listings-header">
-                    <div class="listings-title">
-                        <h2>Austin, TX real estate & homes for sale</h2>
-                        <p class="listings-count">2,010 Homes</p>
-                    </div>
+                    <p class="listings-count">2,010 Homes</p>
                     <div class="sort-dropdown">
                         <span>Sort by:</span>
                         <select class="sort-select">
@@ -283,7 +279,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script src="/js/Houzeo.js"></script>
+    <script src="/js/Houzeo.js" async defer></script>
 </body>
 
 </html>
