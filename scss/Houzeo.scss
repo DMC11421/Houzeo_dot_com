@@ -745,8 +745,18 @@ footer {
 }
 
 @media only screen and (max-width: 430px) {
+    body {
+        padding-top: 226px;
+    }
+
     header {
         padding: 0 16px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 5;
 
         .header-container {
             .bi-list {
@@ -777,6 +787,12 @@ footer {
         padding: 20px 16px;
         border-bottom-right-radius: 16px;
         border-bottom-left-radius: 16px;
+        position: fixed;
+        top: 75px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 4;
 
         .search-container {
             flex-wrap: wrap;
