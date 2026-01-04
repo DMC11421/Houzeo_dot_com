@@ -169,6 +169,10 @@ header .header-container .header-right .bi-person-circle {
   color: #666666;
 }
 
+.save-search-btn {
+  display: none;
+}
+
 .search-btn {
   position: absolute;
   right: 10px;

@@ -51,7 +51,7 @@ function initMap() {
     if (isMobile) {
         mapElementId = 'map-mobile';
     }
-
+    console.log(mapElementId)
     map = new google.maps.Map(document.getElementById(mapElementId), {
         zoom: 12,
         center: austinCenter,
