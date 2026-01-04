@@ -123,6 +123,10 @@ header .header-container .header-right .bi-person-circle {
   align-items: center;
 }
 
+.filter-icon-wrapper {
+  display: none;
+}
+
 .search-field {
   width: 398px;
   height: 48px;
@@ -267,9 +271,18 @@ header .header-container .header-right .bi-person-circle {
   flex: 1;
   position: relative;
 }
-.map-wrapper #map {
+.map-wrapper #map-desktop {
   width: 100%;
   height: 100%;
+}
+
+#map-mobile {
+  width: 100%;
+  height: 100%;
+}
+
+#offcanvasMap {
+  height: 750px;
 }
 
 .listings-wrapper {
@@ -674,12 +687,15 @@ footer {
   .search-section .search-container .filters-wrapper .saved-btn {
     display: none;
   }
+  .main-content-section .map-listings-container {
+    height: calc(100vh - 226px);
+  }
   .main-content-section .map-listings-container .map-wrapper {
     display: none;
   }
   .main-content-section .map-listings-container .listings-wrapper .listings-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 20px;
   }
   .map-button {
     display: block;

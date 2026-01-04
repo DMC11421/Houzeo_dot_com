@@ -41,9 +41,18 @@ const properties = [
 ];
 
 function initMap() {
+
     const austinCenter = { lat: 30.2672, lng: -97.7431 };
 
-    map = new google.maps.Map(document.getElementById('map'), {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+        .test(navigator.userAgent);
+
+    let mapElementId = 'map-desktop';
+    if (isMobile) {
+        mapElementId = 'map-mobile';
+    }
+
+    map = new google.maps.Map(document.getElementById(mapElementId), {
         zoom: 12,
         center: austinCenter,
         mapTypeControl: true,
