@@ -812,7 +812,7 @@ footer {
 
             .search-field-wrapper {
                 .search-field {
-                    width: 344px;
+                    width: calc(100vw - 86px);
                 }
             }
 

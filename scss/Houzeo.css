@@ -646,7 +646,7 @@ footer {
     flex-wrap: wrap;
   }
   .search-section .search-container .search-field-wrapper .search-field {
-    width: 344px;
+    width: calc(100vw - 86px);
   }
   .search-section .search-container .filter-icon-wrapper {
     height: 38px;
