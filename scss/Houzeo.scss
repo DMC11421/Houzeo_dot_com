@@ -441,7 +441,7 @@ header {
 }
 
 #offcanvasMap {
-    height: 750px;
+    height: calc(100vh - 150px);
 }
 
 .listings-wrapper {
@@ -812,7 +812,7 @@ footer {
 
             .search-field-wrapper {
                 .search-field {
-                    width: 304px;
+                    width: 344px;
                 }
             }
 
@@ -850,7 +850,9 @@ footer {
 
             .filters-wrapper {
                 .filter-dropdown {
-                    width: calc((100% - 16px) / 2);
+                    width: calc((100% - 24px) / 4);
+                    height: 36px;
+                    font-size: 12px;
 
                     &:nth-child(3),
                     &:nth-child(4) {
@@ -861,6 +863,18 @@ footer {
                 .filters-btn,
                 .saved-btn {
                     display: none;
+                }
+
+                .save-search-btn {
+                    display: block;
+                    margin-left: auto;
+                    height: 36px;
+                    width: 104px;
+                    border: 1px solid #FFFFFF;
+                    border-radius: 500px;
+                    font-size: 12px;
+                    background-color: #0B5AA5;
+                    color: #fff;
                 }
             }
         }
@@ -895,5 +909,19 @@ footer {
         width: 100px;
         border-radius: 100px;
         color: #ffffff;
+    }
+
+    .nav-menu {
+        .nav-link {
+            padding: 10px 1px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+            &:hover {
+                // background-color: rgba(0, 0, 0, 0.05);
+                cursor: pointer;
+                color: #0B5AA5;
+                border-bottom-color: #0B5AA5;
+            }
+        }
     }
 }

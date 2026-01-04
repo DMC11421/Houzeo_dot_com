@@ -282,7 +282,7 @@ header .header-container .header-right .bi-person-circle {
 }
 
 #offcanvasMap {
-  height: 750px;
+  height: calc(100vh - 150px);
 }
 
 .listings-wrapper {
@@ -646,7 +646,7 @@ footer {
     flex-wrap: wrap;
   }
   .search-section .search-container .search-field-wrapper .search-field {
-    width: 304px;
+    width: 344px;
   }
   .search-section .search-container .filter-icon-wrapper {
     height: 38px;
@@ -678,7 +678,9 @@ footer {
     align-items: center;
   }
   .search-section .search-container .filters-wrapper .filter-dropdown {
-    width: calc((100% - 16px) / 2);
+    width: calc((100% - 24px) / 4);
+    height: 36px;
+    font-size: 12px;
   }
   .search-section .search-container .filters-wrapper .filter-dropdown:nth-child(3), .search-section .search-container .filters-wrapper .filter-dropdown:nth-child(4) {
     display: none;
@@ -686,6 +688,17 @@ footer {
   .search-section .search-container .filters-wrapper .filters-btn,
   .search-section .search-container .filters-wrapper .saved-btn {
     display: none;
+  }
+  .search-section .search-container .filters-wrapper .save-search-btn {
+    display: block;
+    margin-left: auto;
+    height: 36px;
+    width: 104px;
+    border: 1px solid #FFFFFF;
+    border-radius: 500px;
+    font-size: 12px;
+    background-color: #0B5AA5;
+    color: #fff;
   }
   .main-content-section .map-listings-container {
     height: calc(100vh - 226px);
@@ -709,5 +722,14 @@ footer {
     width: 100px;
     border-radius: 100px;
     color: #ffffff;
+  }
+  .nav-menu .nav-link {
+    padding: 10px 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .nav-menu .nav-link:hover {
+    cursor: pointer;
+    color: #0B5AA5;
+    border-bottom-color: #0B5AA5;
   }
 }/*# sourceMappingURL=Houzeo.css.map */

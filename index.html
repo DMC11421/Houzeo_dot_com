@@ -28,7 +28,8 @@
 <body>
     <header>
         <div class="header-container">
-            <i class="bi bi-list"></i>
+            <i class="bi bi-list" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                aria-controls="offcanvasMenu"></i>
             <div class="logo">
                 <img src="/assets/Houzeo_logo.png" alt="Houzeo">
             </div>
@@ -84,6 +85,9 @@
                 <button class="saved-btn">
                     <i class="bi bi-pencil-fill"></i>
                     Saved
+                </button>
+                <button class="save-search-btn">
+                    Save Search
                 </button>
             </div>
         </div>
@@ -316,6 +320,25 @@
         </div>
         <div class="offcanvas-body small">
             <div id="map-mobile"></div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <nav class="nav-menu">
+                <a href="#" class="nav-link">Product <span class="dropdown-icon">▼</span></a>
+                <a href="#" class="nav-link">How Houzeo Works</a>
+                <a href="#" class="nav-link">Reviews</a>
+                <a href="#" class="nav-link">Buy <span class="dropdown-icon">▼</span></a>
+                <a href="#" class="nav-link">Sell <span class="dropdown-icon">▼</span></a>
+                <a href="#" class="nav-link">Pricing</a>
+                <a href="#" class="nav-link">Resources <span class="dropdown-icon">▼</span></a>
+                <a href="#" class="nav-link">Sign In</a>
+            </nav>
         </div>
     </div>
 
