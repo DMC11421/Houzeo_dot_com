@@ -108,26 +108,19 @@ header .header-container .header-right .bi-person-circle {
   padding: 16px 24px;
   box-shadow: 0px 5px 10px 0px rgba(152, 152, 152, 0.1);
 }
-
-.search-container {
+.search-section .search-container {
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 16px;
 }
-
-.search-field-wrapper {
+.search-section .search-container .search-field-wrapper {
   position: relative;
   display: flex;
   align-items: center;
 }
-
-.filter-icon-wrapper {
-  display: none;
-}
-
-.search-field {
+.search-section .search-container .search-field-wrapper .search-field {
   width: 398px;
   height: 48px;
   padding: 8px 8px 8px 16px;
@@ -141,14 +134,13 @@ header .header-container .header-right .bi-person-circle {
   color: #000000;
   outline: none;
 }
-.search-field::-moz-placeholder {
+.search-section .search-container .search-field-wrapper .search-field::-moz-placeholder {
   color: #999999;
 }
-.search-field::placeholder {
+.search-section .search-container .search-field-wrapper .search-field::placeholder {
   color: #999999;
 }
-
-.clear-btn {
+.search-section .search-container .search-field-wrapper .clear-btn {
   position: absolute;
   right: 52px;
   border: none;
@@ -165,15 +157,10 @@ header .header-container .header-right .bi-person-circle {
   justify-content: center;
   transition: color 0.2s ease;
 }
-.clear-btn:hover {
+.search-section .search-container .search-field-wrapper .clear-btn:hover {
   color: #666666;
 }
-
-.save-search-btn {
-  display: none;
-}
-
-.search-btn {
+.search-section .search-container .search-field-wrapper .search-btn {
   position: absolute;
   right: 10px;
   width: 32px;
@@ -186,18 +173,19 @@ header .header-container .header-right .bi-person-circle {
   justify-content: center;
   transition: opacity 0.2s ease;
 }
-.search-btn:hover {
+.search-section .search-container .search-field-wrapper .search-btn:hover {
   opacity: 0.9;
 }
-
-.filters-wrapper {
+.search-section .search-container .filter-icon-wrapper {
+  display: none;
+}
+.search-section .search-container .filters-wrapper {
   display: flex;
   align-items: center;
   gap: 12px;
   flex: 1;
 }
-
-.filter-dropdown {
+.search-section .search-container .filters-wrapper .filter-dropdown {
   height: 48px;
   padding: 0 16px;
   background: #ffffff;
@@ -217,22 +205,23 @@ header .header-container .header-right .bi-person-circle {
   white-space: nowrap;
   width: calc((100% - 48px) / 5);
 }
-.filter-dropdown:hover {
+.search-section .search-container .filters-wrapper .filter-dropdown:hover {
   border-color: #2876C1;
   color: #0B5AA5;
   font-weight: 600;
 }
-.filter-dropdown:hover .dropdown-arrow {
+.search-section .search-container .filters-wrapper .filter-dropdown:hover .dropdown-arrow {
   color: #0B5AA5;
 }
-
-.dropdown-arrow {
+.search-section .search-container .filters-wrapper .filter-dropdown .dropdown-arrow {
   font-size: 10px;
   color: #000000;
 }
-
-.filters-btn,
-.saved-btn {
+.search-section .search-container .filters-wrapper .save-search-btn {
+  display: none;
+}
+.search-section .search-container .filters-wrapper .filters-btn,
+.search-section .search-container .filters-wrapper .saved-btn {
   height: 48px;
   padding: 0 16px;
   background: #ffffff;
@@ -250,75 +239,39 @@ header .header-container .header-right .bi-person-circle {
   transition: border-color 0.2s ease;
   white-space: nowrap;
 }
-.filters-btn:hover,
-.saved-btn:hover {
+.search-section .search-container .filters-wrapper .filters-btn:hover,
+.search-section .search-container .filters-wrapper .saved-btn:hover {
   border-color: #0B5AA5;
   color: #0B5AA5;
 }
-.filters-btn svg,
-.saved-btn svg {
+.search-section .search-container .filters-wrapper .filters-btn svg,
+.search-section .search-container .filters-wrapper .saved-btn svg {
   width: 18px;
   height: 18px;
 }
-
-.saved-btn {
+.search-section .search-container .filters-wrapper .saved-btn {
   font-weight: 500;
   border-radius: 500px;
 }
 
-.map-listings-container {
+.main-content-section .map-listings-container {
   display: flex;
   height: calc(100vh - 155px);
 }
-
-.map-wrapper {
+.main-content-section .map-listings-container .map-wrapper {
   flex: 1;
   position: relative;
 }
-.map-wrapper #map-desktop {
+.main-content-section .map-listings-container .map-wrapper #map-desktop {
   width: 100%;
   height: 100%;
 }
-
-#map-mobile {
-  width: 100%;
-  height: 100%;
-}
-
-#offcanvasMap {
-  height: calc(100vh - 150px);
-}
-
-.listings-wrapper {
+.main-content-section .map-listings-container .listings-wrapper {
   flex: 1;
   overflow-y: auto;
   padding: 24px;
-  /* width */
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
 }
-.listings-wrapper::-webkit-scrollbar {
-  width: 7px;
-}
-.listings-wrapper::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-.listings-wrapper::-webkit-scrollbar-thumb {
-  background: #2876C1;
-}
-.listings-wrapper::-webkit-scrollbar-thumb:hover {
-  background: #0E5293;
-}
-
-.listings-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 24px;
-}
-
-.listings-title h2 {
+.main-content-section .map-listings-container .listings-wrapper .listings-title h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 18px;
@@ -326,8 +279,13 @@ header .header-container .header-right .bi-person-circle {
   color: #000000;
   margin: 0 0 8px 0;
 }
-
-.listings-count {
+.main-content-section .map-listings-container .listings-wrapper .listings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.main-content-section .map-listings-container .listings-wrapper .listings-header .listings-count {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -335,21 +293,19 @@ header .header-container .header-right .bi-person-circle {
   color: rgba(0, 0, 0, 0.4);
   margin: 0;
 }
-
-.sort-dropdown {
+.main-content-section .map-listings-container .listings-wrapper .listings-header .sort-dropdown {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.sort-dropdown span {
+.main-content-section .map-listings-container .listings-wrapper .listings-header .sort-dropdown span {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 100%;
   color: rgba(0, 0, 0, 0.4);
 }
-
-.sort-select {
+.main-content-section .map-listings-container .listings-wrapper .listings-header .sort-dropdown .sort-select {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -363,42 +319,40 @@ header .header-container .header-right .bi-person-circle {
   max-width: 120px;
   color: #0B5AA5;
 }
-
-.listings-grid {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
-
-.property-card {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card {
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   overflow: hidden;
   transition: all 0.2s ease;
 }
-.property-card:hover {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.property-card:hover {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card:hover {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1019607843);
 }
-
-.property-image-wrapper {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card:hover .nav-arrow {
+  display: flex;
+}
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper {
   position: relative;
   width: 100%;
   height: 200px;
   overflow: hidden;
 }
-
-.property-image {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .property-image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.days-badge {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .days-badge {
   position: absolute;
   top: 16px;
   left: 16px;
@@ -412,8 +366,7 @@ header .header-container .header-right .bi-person-circle {
   border-radius: 500px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1490196078);
 }
-
-.favorite-btn {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .favorite-btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -431,27 +384,26 @@ header .header-container .header-right .bi-person-circle {
   justify-content: center;
   transition: background-color 0.2s ease;
 }
-.favorite-btn:hover {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .favorite-btn:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
-.favorite-btn:hover svg path {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .favorite-btn:hover svg path {
   fill: red;
   /* fill heart on hover */
   stroke: red;
   /* optional: stroke also red */
 }
-.favorite-btn svg {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .favorite-btn svg {
   width: 24px;
   height: 24px;
 }
-.favorite-btn svg path {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .favorite-btn svg path {
   fill: transparent;
   /* default: no fill */
   stroke: white;
   transition: fill 0.25s ease, stroke 0.25s ease;
 }
-
-.nav-arrow {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .nav-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -472,44 +424,48 @@ header .header-container .header-right .bi-person-circle {
   justify-content: center;
   transition: background-color 0.2s ease;
 }
-.nav-arrow.nav-arrow-left {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .nav-arrow.nav-arrow-left {
   left: 8px;
 }
-.nav-arrow.nav-arrow-right {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .nav-arrow.nav-arrow-right {
   right: 8px;
 }
-.nav-arrow:hover {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .nav-arrow:hover {
   background-color: #ffffff;
 }
-
-.property-card:hover .nav-arrow {
-  display: flex;
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details {
+  padding: 16px;
 }
-
-.property-badge {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-type .property-badge {
   display: flex;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 5px 8px;
   border-radius: 100px;
 }
-.property-badge .status-dot {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-type .property-badge .status-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   display: block;
   margin-right: 5px;
 }
-.property-badge .status-dot.status-house {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-type .property-badge .status-dot.status-house {
   background-color: #00B67B;
 }
-.property-badge .status-dot.status-condo {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-type .property-badge .status-dot.status-condo {
   background-color: #2196F3;
 }
-.property-badge .status-dot.status-multi {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-type .property-badge .status-dot.status-multi {
   background-color: #FF9800;
 }
-.property-badge .type-text {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-type .property-badge .type-text {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -517,19 +473,7 @@ header .header-container .header-right .bi-person-circle {
   color: #000000;
   flex: 1;
 }
-
-.property-details {
-  padding: 16px;
-}
-
-.property-type {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-
-.view-count {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-type .view-count {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -539,17 +483,16 @@ header .header-container .header-right .bi-person-circle {
   line-height: 100%;
   color: #000000;
 }
-.view-count svg {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-type .view-count svg {
   width: 16px;
   height: 16px;
 }
-
-.property-price-spec {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-price-spec {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.property-price-spec .property-price {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-price-spec .property-price {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 18px;
@@ -557,12 +500,12 @@ header .header-container .header-right .bi-person-circle {
   color: #0B5AA5;
   margin-bottom: 12px;
 }
-.property-price-spec .property-specs {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-price-spec .property-specs {
   display: flex;
   gap: 16px;
   margin-bottom: 12px;
 }
-.property-price-spec .property-specs .spec {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-price-spec .property-specs .spec {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -570,13 +513,12 @@ header .header-container .header-right .bi-person-circle {
   color: rgba(0, 0, 0, 0.5);
   display: flex;
 }
-.property-price-spec .property-specs .spec strong {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-price-spec .property-specs .spec strong {
   font-weight: 600;
   font-size: 14px;
   color: #0B5AA5;
 }
-
-.property-address {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-address {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -584,30 +526,47 @@ header .header-container .header-right .bi-person-circle {
   color: #333333;
   margin-bottom: 8px;
 }
-
-.property-agent {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-details .property-agent {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
   color: rgba(0, 0, 0, 0.5);
 }
-
-hr {
+.main-content-section .map-listings-container .listings-wrapper hr {
   border-color: rgba(0, 0, 0, 0.2);
 }
-
-footer {
+.main-content-section .map-listings-container .listings-wrapper footer {
   display: flex;
   justify-content: center;
   font-size: 12px;
 }
-
-.map-button {
+.main-content-section .map-listings-container .listings-wrapper .map-button {
   display: none;
 }
+.main-content-section .map-listings-container .listings-wrapper::-webkit-scrollbar {
+  width: 7px;
+}
+.main-content-section .map-listings-container .listings-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.main-content-section .map-listings-container .listings-wrapper::-webkit-scrollbar-thumb {
+  background: #2876C1;
+}
+.main-content-section .map-listings-container .listings-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #0E5293;
+}
 
-@media only screen and (max-width: 430px) {
+#map-mobile {
+  width: 100%;
+  height: 100%;
+}
+
+#offcanvasMap {
+  height: calc(100vh - 150px);
+}
+
+@media only screen and (max-width: 431px) {
   body {
     padding-top: 226px;
   }
@@ -715,7 +674,7 @@ footer {
     gap: 20px;
   }
   .map-button {
-    display: block;
+    display: block !important;
     position: fixed;
     bottom: 24px;
     left: 38.5%;

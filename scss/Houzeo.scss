@@ -251,17 +251,6 @@ header {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 // ============================================================================
 // SEARCH SECTION
 // ============================================================================
@@ -270,172 +259,465 @@ header {
     background-color: $color-white;
     padding: $space-lg $space-2xl;
     box-shadow: 0px 5px 10px 0px rgba(152, 152, 152, 0.1);
-}
 
-.search-container {
-    @include container;
-    display: flex;
-    align-items: center;
-    gap: $space-lg;
-}
+    .search-container {
+        @include container;
+        display: flex;
+        align-items: center;
+        gap: $space-lg;
 
-.search-field-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
+        .search-field-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
 
-.filter-icon-wrapper {
-    display: none;
-}
+            .search-field {
+                width: 398px;
+                height: 48px;
+                padding: $space-sm $space-sm $space-sm $space-lg;
+                // padding-right: $space-2xl + $space-3xl;
+                border-radius: $radius-full;
+                border: 2px solid transparent;
+                @include gradient-border;
+                @include font-style($font-size-base, $font-weight-medium);
+                color: $color-dark-black;
+                outline: none;
 
-.search-field {
-    width: 398px;
-    height: 48px;
-    padding: $space-sm $space-sm $space-sm $space-lg;
-    // padding-right: $space-2xl + $space-3xl;
-    border-radius: $radius-full;
-    border: 2px solid transparent;
-    @include gradient-border;
-    @include font-style($font-size-base, $font-weight-medium);
-    color: $color-dark-black;
-    outline: none;
+                &::placeholder {
+                    color: $color-light-gray;
+                }
+            }
 
-    &::placeholder {
-        color: $color-light-gray;
-    }
-}
+            .clear-btn {
+                position: absolute;
+                right: 52px;
+                @include button-reset;
+                color: rgba(0, 0, 0, 0.3);
+                font-size: $font-size-base;
+                padding: $space-xs $space-sm;
+                font-weight: $font-weight-semibold;
+                @include flex-center;
+                @include transition(color);
 
-.clear-btn {
-    position: absolute;
-    right: 52px;
-    @include button-reset;
-    color: rgba(0, 0, 0, 0.3);
-    font-size: $font-size-base;
-    padding: $space-xs $space-sm;
-    font-weight: $font-weight-semibold;
-    @include flex-center;
-    @include transition(color);
+                &:hover {
+                    color: $color-dark-gray;
+                }
+            }
 
-    &:hover {
-        color: $color-dark-gray;
-    }
-}
+            .search-btn {
+                position: absolute;
+                right: 10px;
+                width: 32px;
+                height: 32px;
+                border-radius: $radius-circle;
+                border: none;
+                // @include gradient-primary;
+                background-color: $color-search-btn;
+                // @include button-reset;
+                @include flex-center;
+                @include transition(opacity);
 
-.save-search-btn {
-    display: none;
-}
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
 
-.search-btn {
-    position: absolute;
-    right: 10px;
-    width: 32px;
-    height: 32px;
-    border-radius: $radius-circle;
-    border: none;
-    // @include gradient-primary;
-    background-color: $color-search-btn;
-    // @include button-reset;
-    @include flex-center;
-    @include transition(opacity);
+        .filter-icon-wrapper {
+            display: none;
+        }
 
-    &:hover {
-        opacity: 0.9;
-    }
-}
+        .filters-wrapper {
+            display: flex;
+            align-items: center;
+            gap: $space-md;
+            flex: 1;
 
-.filters-wrapper {
-    display: flex;
-    align-items: center;
-    gap: $space-md;
-    flex: 1;
-}
+            .filter-dropdown {
+                height: 48px;
+                padding: 0 $space-lg;
+                background: $color-white;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: $radius-lg;
+                @include font-style($font-size-base, $font-weight-regular);
+                color: $color-dark-black;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: $space-sm;
+                @include transition(all, $transition-faster);
+                white-space: nowrap;
+                width: calc((100% - 48px) / 5);
 
-.filter-dropdown {
-    height: 48px;
-    padding: 0 $space-lg;
-    background: $color-white;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: $radius-lg;
-    @include font-style($font-size-base, $font-weight-regular);
-    color: $color-dark-black;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: $space-sm;
-    @include transition(all, $transition-faster);
-    white-space: nowrap;
-    width: calc((100% - 48px) / 5);
+                &:hover {
+                    border-color: $color-primary-light;
+                    color: $color-search-btn;
+                    font-weight: $font-weight-semibold;
 
-    &:hover {
-        border-color: $color-primary-light;
-        color: $color-search-btn;
-        font-weight: $font-weight-semibold;
+                    .dropdown-arrow {
+                        color: $color-search-btn;
+                    }
+                }
 
-        .dropdown-arrow {
-            color: $color-search-btn;
+                .dropdown-arrow {
+                    font-size: 10px;
+                    color: $color-dark-black;
+                }
+            }
+
+            .save-search-btn {
+                display: none;
+            }
+
+            .filters-btn,
+            .saved-btn {
+                height: 48px;
+                padding: 0 $space-lg;
+                background: $color-white;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: $radius-lg;
+                @include font-style($font-size-base, $font-weight-regular);
+                color: $color-dark-black;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: $space-sm;
+                @include transition(border-color);
+                white-space: nowrap;
+
+                &:hover {
+                    border-color: $color-search-btn;
+                    color: $color-search-btn;
+                }
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+
+            .saved-btn {
+                font-weight: $font-weight-medium;
+                border-radius: $radius-full;
+            }
         }
     }
-}
-
-.dropdown-arrow {
-    font-size: 10px;
-    color: $color-dark-black;
-}
-
-.filters-btn,
-.saved-btn {
-    height: 48px;
-    padding: 0 $space-lg;
-    background: $color-white;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: $radius-lg;
-    @include font-style($font-size-base, $font-weight-regular);
-    color: $color-dark-black;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: $space-sm;
-    @include transition(border-color);
-    white-space: nowrap;
-
-    &:hover {
-        border-color: $color-search-btn;
-        color: $color-search-btn;
-    }
-
-    svg {
-        width: 18px;
-        height: 18px;
-    }
-}
-
-.saved-btn {
-    font-weight: $font-weight-medium;
-    border-radius: $radius-full;
 }
 
 // ============================================================================
 // MAIN CONTENT
 // ============================================================================
 
-// .main-content-section {
-//     background-color: $color-bg-light;
-// }
+.main-content-section {
+    .map-listings-container {
+        display: flex;
+        height: calc(100vh - 155px);
 
-.map-listings-container {
-    display: flex;
-    height: calc(100vh - 155px);
-}
+        .map-wrapper {
+            flex: 1;
+            position: relative;
 
-.map-wrapper {
-    flex: 1;
-    position: relative;
+            #map-desktop {
+                width: 100%;
+                height: 100%;
+            }
+        }
 
-    #map-desktop {
-        width: 100%;
-        height: 100%;
+        .listings-wrapper {
+            flex: 1;
+            overflow-y: auto;
+            padding: $space-2xl;
+
+            .listings-title {
+                h2 {
+                    @include font-style($font-size-xl, $font-weight-semibold);
+                    color: $color-dark-black;
+                    margin: 0 0 $space-sm 0;
+                }
+            }
+
+            .listings-header {
+                @include flex-between;
+                margin-bottom: $space-2xl;
+
+                .listings-count {
+                    @include font-style($font-size-base, $font-weight-medium);
+                    color: rgba(0, 0, 0, 0.4);
+                    margin: 0;
+                }
+
+                .sort-dropdown {
+                    display: flex;
+                    align-items: center;
+                    gap: $space-sm;
+
+                    span {
+                        @include font-style($font-size-base, $font-weight-medium);
+                        color: rgba(0, 0, 0, 0.4);
+                    }
+
+                    .sort-select {
+                        @include font-style($font-size-base, $font-weight-medium);
+                        color: $color-black;
+                        border: none;
+                        border-radius: $radius-md;
+                        // padding: 6px 12px;
+                        background-color: $color-white;
+                        cursor: pointer;
+                        outline: none;
+                        max-width: 120px;
+                        color: $color-search-btn;
+                    }
+                }
+            }
+
+            .listings-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: $space-2xl;
+
+                .property-card {
+                    background-color: $color-white;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    border-radius: $radius-xxl;
+                    overflow: hidden;
+                    @include transition(all);
+                    @include hover-shadow;
+
+                    &:hover {
+                        // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                        box-shadow: 0px 0px 20px 0px #0000001A;
+
+                        .nav-arrow {
+                            display: flex;
+                        }
+                    }
+
+                    .property-image-wrapper {
+                        position: relative;
+                        width: 100%;
+                        height: 200px;
+                        overflow: hidden;
+
+                        .property-image {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+
+                        .days-badge {
+                            position: absolute;
+                            top: $space-lg;
+                            left: $space-lg;
+                            background-color: $color-white;
+                            color: $color-dark-black;
+                            @include font-style($font-size-sm, $font-weight-medium);
+                            padding: 6px 12px;
+                            border-radius: $radius-full;
+                            box-shadow: 0px 4px 10px 0px #00000026;
+
+                        }
+
+                        .favorite-btn {
+                            position: absolute;
+                            top: $space-sm;
+                            right: $space-sm;
+                            width: 40px;
+                            height: 40px;
+                            background-color: rgba(0, 0, 0, 0.5);
+                            @include button-reset;
+                            border-radius: $radius-circle;
+                            @include flex-center;
+                            @include transition(background-color);
+
+                            &:hover {
+                                background-color: rgba(0, 0, 0, 0.5);
+
+                                svg path {
+                                    fill: red;
+                                    /* fill heart on hover */
+                                    stroke: red;
+                                    /* optional: stroke also red */
+                                }
+                            }
+
+                            svg {
+                                width: 24px;
+                                height: 24px;
+
+                                path {
+                                    fill: transparent;
+                                    /* default: no fill */
+                                    stroke: white;
+                                    transition: fill 0.25s ease, stroke 0.25s ease;
+                                }
+                            }
+                        }
+
+                        .nav-arrow {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 32px;
+                            height: 32px;
+                            background-color: rgba(255, 255, 255, 0.9);
+                            @include button-reset;
+                            border-radius: $radius-circle;
+                            font-size: 24px;
+                            color: $color-black;
+                            display: none;
+                            @include flex-center;
+                            @include transition(background-color);
+
+                            &.nav-arrow-left {
+                                left: $space-sm;
+                            }
+
+                            &.nav-arrow-right {
+                                right: $space-sm;
+                            }
+
+                            &:hover {
+                                background-color: $color-white;
+                            }
+                        }
+                    }
+
+                    .property-details {
+                        padding: $space-lg;
+
+                        .property-type {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            // gap: $space-sm;
+                            margin-bottom: $space-md;
+
+
+                            .property-badge {
+                                display: flex;
+                                align-items: center;
+                                border: 1px solid rgba(0, 0, 0, 0.1);
+                                padding: 5px 8px;
+                                border-radius: 100px;
+
+                                .status-dot {
+                                    width: 10px;
+                                    height: 10px;
+                                    border-radius: $radius-circle;
+                                    display: block;
+                                    margin-right: 5px;
+
+                                    &.status-house {
+                                        background-color: $color-success;
+                                    }
+
+                                    &.status-condo {
+                                        background-color: $color-info;
+                                    }
+
+                                    &.status-multi {
+                                        background-color: $color-warning;
+                                    }
+                                }
+
+                                .type-text {
+                                    @include font-style($font-size-sm, $font-weight-regular);
+                                    color: $color-dark-black;
+                                    flex: 1;
+                                }
+                            }
+
+                            .view-count {
+                                display: flex;
+                                align-items: center;
+                                gap: $space-xs;
+                                @include font-style($font-size-sm, $font-weight-regular);
+                                color: $color-dark-black;
+
+                                svg {
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                            }
+                        }
+
+                        .property-price-spec {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .property-price {
+                                @include font-style($font-size-xl, $font-weight-semibold);
+                                color: $color-search-btn;
+                                margin-bottom: $space-md;
+                            }
+
+                            .property-specs {
+                                display: flex;
+                                gap: $space-lg;
+                                margin-bottom: $space-md;
+
+                                .spec {
+                                    @include font-style($font-size-sm, $font-weight-regular);
+                                    color: rgba(0, 0, 0, 0.5);
+                                    display: flex;
+
+                                    strong {
+                                        font-weight: $font-weight-semibold;
+                                        font-size: 14px;
+                                        color: $color-search-btn;
+                                    }
+                                }
+                            }
+                        }
+
+                        .property-address {
+                            @include font-style($font-size-sm, $font-weight-regular);
+                            color: $color-black;
+                            margin-bottom: $space-sm;
+                        }
+
+                        .property-agent {
+                            @include font-style($font-size-sm, $font-weight-regular);
+                            color: rgba(0, 0, 0, 0.5);
+                        }
+                    }
+                }
+            }
+
+            hr {
+                border-color: rgba(0, 0, 0, 0.2);
+            }
+
+            footer {
+                display: flex;
+                justify-content: center;
+                font-size: 12px;
+            }
+
+            .map-button {
+                display: none;
+            }
+
+            &::-webkit-scrollbar {
+                width: 07px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #2876C1;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background: #0E5293;
+            }
+
+        }
     }
 }
 
@@ -448,320 +730,7 @@ header {
     height: calc(100vh - 150px);
 }
 
-.listings-wrapper {
-    flex: 1;
-    // background-color: $color-white;
-    overflow-y: auto;
-    padding: $space-2xl;
-
-    /* width */
-    &::-webkit-scrollbar {
-        width: 07px;
-    }
-
-    /* Track */
-    &::-webkit-scrollbar-track {
-        background: #f1f1f1;
-    }
-
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-        background: #2876C1;
-    }
-
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-        background: #0E5293;
-    }
-
-}
-
-
-// ============================================================================
-// LISTINGS SECTION
-// ============================================================================
-
-.listings-header {
-    @include flex-between;
-    margin-bottom: $space-2xl;
-}
-
-.listings-title {
-    h2 {
-        @include font-style($font-size-xl, $font-weight-semibold);
-        color: $color-dark-black;
-        margin: 0 0 $space-sm 0;
-    }
-}
-
-.listings-count {
-    @include font-style($font-size-base, $font-weight-medium);
-    color: rgba(0, 0, 0, 0.4);
-    margin: 0;
-}
-
-.sort-dropdown {
-    display: flex;
-    align-items: center;
-    gap: $space-sm;
-
-    span {
-        @include font-style($font-size-base, $font-weight-medium);
-        color: rgba(0, 0, 0, 0.4);
-    }
-}
-
-.sort-select {
-    @include font-style($font-size-base, $font-weight-medium);
-    color: $color-black;
-    border: none;
-    border-radius: $radius-md;
-    // padding: 6px 12px;
-    background-color: $color-white;
-    cursor: pointer;
-    outline: none;
-    max-width: 120px;
-    color: $color-search-btn;
-}
-
-.listings-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: $space-2xl;
-}
-
-
-// ============================================================================
-// PROPERTY CARD
-// ============================================================================
-
-.property-card {
-    background-color: $color-white;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: $radius-xxl;
-    overflow: hidden;
-    @include transition(all);
-    @include hover-shadow;
-
-    &:hover {
-        // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        box-shadow: 0px 0px 20px 0px #0000001A;
-
-    }
-}
-
-.property-image-wrapper {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-}
-
-.property-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.days-badge {
-    position: absolute;
-    top: $space-lg;
-    left: $space-lg;
-    background-color: $color-white;
-    color: $color-dark-black;
-    @include font-style($font-size-sm, $font-weight-medium);
-    padding: 6px 12px;
-    border-radius: $radius-full;
-    box-shadow: 0px 4px 10px 0px #00000026;
-
-}
-
-.favorite-btn {
-    position: absolute;
-    top: $space-sm;
-    right: $space-sm;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
-    @include button-reset;
-    border-radius: $radius-circle;
-    @include flex-center;
-    @include transition(background-color);
-
-    &:hover {
-        background-color: rgba(0, 0, 0, 0.5);
-
-        svg path {
-            fill: red;
-            /* fill heart on hover */
-            stroke: red;
-            /* optional: stroke also red */
-        }
-    }
-
-    svg {
-        width: 24px;
-        height: 24px;
-
-        path {
-            fill: transparent;
-            /* default: no fill */
-            stroke: white;
-            transition: fill 0.25s ease, stroke 0.25s ease;
-        }
-    }
-}
-
-.nav-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 32px;
-    height: 32px;
-    background-color: rgba(255, 255, 255, 0.9);
-    @include button-reset;
-    border-radius: $radius-circle;
-    font-size: 24px;
-    color: $color-black;
-    display: none;
-    @include flex-center;
-    @include transition(background-color);
-
-    &.nav-arrow-left {
-        left: $space-sm;
-    }
-
-    &.nav-arrow-right {
-        right: $space-sm;
-    }
-
-    &:hover {
-        background-color: $color-white;
-    }
-}
-
-.property-card:hover .nav-arrow {
-    display: flex;
-}
-
-.property-badge {
-    display: flex;
-    align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 5px 8px;
-    border-radius: 100px;
-
-    .status-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: $radius-circle;
-        display: block;
-        margin-right: 5px;
-
-        &.status-house {
-            background-color: $color-success;
-        }
-
-        &.status-condo {
-            background-color: $color-info;
-        }
-
-        &.status-multi {
-            background-color: $color-warning;
-        }
-    }
-
-    .type-text {
-        @include font-style($font-size-sm, $font-weight-regular);
-        color: $color-dark-black;
-        flex: 1;
-    }
-}
-
-.property-details {
-    padding: $space-lg;
-}
-
-.property-type {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    // gap: $space-sm;
-    margin-bottom: $space-md;
-}
-
-
-
-.view-count {
-    display: flex;
-    align-items: center;
-    gap: $space-xs;
-    @include font-style($font-size-sm, $font-weight-regular);
-    color: $color-dark-black;
-
-    svg {
-        width: 16px;
-        height: 16px;
-    }
-}
-
-.property-price-spec {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .property-price {
-        @include font-style($font-size-xl, $font-weight-semibold);
-        color: $color-search-btn;
-        margin-bottom: $space-md;
-    }
-
-    .property-specs {
-        display: flex;
-        gap: $space-lg;
-        margin-bottom: $space-md;
-
-        .spec {
-            @include font-style($font-size-sm, $font-weight-regular);
-            color: rgba(0, 0, 0, 0.5);
-            display: flex;
-
-            strong {
-                font-weight: $font-weight-semibold;
-                font-size: 14px;
-                color: $color-search-btn;
-            }
-        }
-    }
-
-}
-
-.property-address {
-    @include font-style($font-size-sm, $font-weight-regular);
-    color: $color-black;
-    margin-bottom: $space-sm;
-}
-
-.property-agent {
-    @include font-style($font-size-sm, $font-weight-regular);
-    color: rgba(0, 0, 0, 0.5);
-}
-
-hr {
-    border-color: rgba(0, 0, 0, 0.2);
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    font-size: 12px;
-}
-
-.map-button {
-    display: none;
-}
-
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 431px) {
     body {
         padding-top: 226px;
     }
@@ -902,7 +871,7 @@ footer {
     }
 
     .map-button {
-        display: block;
+        display: block !important;
         position: fixed;
         bottom: 24px;
         left: 38.5%;
