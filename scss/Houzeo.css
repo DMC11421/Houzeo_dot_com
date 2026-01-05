@@ -721,6 +721,7 @@ header .header-container .header-right .bi-person-circle {
     width: 100px;
     border-radius: 100px;
     color: #ffffff;
+    z-index: 10;
   }
   .nav-menu .nav-link {
     padding: 10px 1px;
