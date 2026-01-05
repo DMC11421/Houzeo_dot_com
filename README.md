@@ -10,24 +10,19 @@ https://houzeo-dot-com.vercel.app/
 ## 📁 Project Structure
 
 Sai_Harne_Houzeo_task
-│
 ├── index.html
-│
 ├── assets/
 │ ├── 1.png
 │ ├── 2.png
 │ ├── 3.png
 │ ├── 4.png
 │ └── Houzeo_logo.png
-│
 ├── scss/
-│ └── Houzeo.css
-│ └── Houzeo.css.map
+│ ├── Houzeo.css
+│ ├── Houzeo.css.map
 │ └── Houzeo.scss
-│
 ├── js/
 │ └── Houzeo.js
-│
 ├── vercel.json
 └── README.md
 
