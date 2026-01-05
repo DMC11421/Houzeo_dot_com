@@ -1,49 +1,76 @@
 let map;
 let markers = [];
+const austinCenter = { lat: 30.2672, lng: -97.7431 };
+const properties = generateRandomProperties(austinCenter, 250, 300, 10000);
 
-const properties = [
-    {
-        id: 1,
-        lat: 30.2672,
-        lng: -97.7431,
-        price: '$3,349,000',
-        beds: 4,
-        baths: 3,
-        sqft: 998
-    },
-    {
-        id: 2,
-        lat: 30.2850,
-        lng: -97.7340,
-        price: '$3,349,000',
-        beds: 4,
-        baths: 3,
-        sqft: 998
-    },
-    {
-        id: 3,
-        lat: 30.2500,
-        lng: -97.7500,
-        price: '$3,349,000',
-        beds: 4,
-        baths: 3,
-        sqft: 998
-    },
-    {
-        id: 4,
-        lat: 30.2750,
-        lng: -97.7600,
-        price: '$3,349,000',
-        beds: 4,
-        baths: 3,
-        sqft: 998
+function generateRandomProperties(center, count = 50, minDistance = 200, maxDistance = 3000) {
+    const properties = [];
+    const earthRadius = 6378137; // meters
+
+    for (let i = 0; i < count; i++) {
+        const distance = Math.random() * (maxDistance - minDistance) + minDistance;
+        const angle = Math.random() * 2 * Math.PI;
+
+        const deltaLat = (distance * Math.cos(angle)) / earthRadius;
+        const deltaLng = (distance * Math.sin(angle)) / (earthRadius * Math.cos((center.lat * Math.PI) / 180));
+
+        const lat = center.lat + (deltaLat * 180) / Math.PI;
+        const lng = center.lng + (deltaLng * 180) / Math.PI;
+
+        properties.push({
+            id: i + 1,
+            lat,
+            lng,
+            price: `$${(2.5 + Math.random() * 1.5).toFixed(2)}M`,
+            beds: Math.floor(Math.random() * 3) + 3,
+            baths: Math.floor(Math.random() * 3) + 2,
+            sqft: Math.floor(Math.random() * 600) + 800
+        });
     }
-];
+
+    return properties;
+}
+
+// const properties = [
+//     {
+//         id: 1,
+//         lat: 30.2672,
+//         lng: -97.7431,
+//         price: '$3,349,000',
+//         beds: 4,
+//         baths: 3,
+//         sqft: 998
+//     },
+//     {
+//         id: 2,
+//         lat: 30.2850,
+//         lng: -97.7340,
+//         price: '$3,349,000',
+//         beds: 4,
+//         baths: 3,
+//         sqft: 998
+//     },
+//     {
+//         id: 3,
+//         lat: 30.2500,
+//         lng: -97.7500,
+//         price: '$3,349,000',
+//         beds: 4,
+//         baths: 3,
+//         sqft: 998
+//     },
+//     {
+//         id: 4,
+//         lat: 30.2750,
+//         lng: -97.7600,
+//         price: '$3,349,000',
+//         beds: 4,
+//         baths: 3,
+//         sqft: 998
+//     }
+// ];
 
 function initMap() {
-
-    const austinCenter = { lat: 30.2672, lng: -97.7431 };
-
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
         .test(navigator.userAgent);
 
@@ -51,7 +78,7 @@ function initMap() {
     if (isMobile) {
         mapElementId = 'map-mobile';
     }
-    console.log(mapElementId)
+
     map = new google.maps.Map(document.getElementById(mapElementId), {
         zoom: 12,
         center: austinCenter,
@@ -87,12 +114,31 @@ function initMap() {
             map: map,
             title: property.price,
             icon: {
-                path: google.maps.SymbolPath.CIRCLE,
-                scale: 10,
-                fillColor: '#0E5293',
+                path: `
+                    M12 2
+                    C8.13 2 5 5.13 5 9
+                    c0 5.25 7 13 7 13
+                    s7-7.75 7-13
+                    c0-3.87-3.13-7-7-7
+                    z
+
+                    M9 8
+                    L12 5
+                    L15 8
+                    V12
+                    H13
+                    V10
+                    H11
+                    V12
+                    H9
+                    Z
+                    `,
+                fillColor: "#0E5293",
                 fillOpacity: 1,
-                strokeColor: '#ffffff',
-                strokeWeight: 3,
+                strokeColor: "#ffffff",
+                strokeWeight: 2,
+                scale: 2,
+                anchor: new google.maps.Point(12, 22)
             }
         });
 
