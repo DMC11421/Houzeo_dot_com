@@ -346,11 +346,47 @@ header .header-container .header-right .bi-person-circle {
   height: 200px;
   overflow: hidden;
 }
-.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .property-image {
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .property-carousel {
+  height: 100%;
+}
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .property-carousel .item {
+  height: 200px;
+}
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .property-carousel .item img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
+}
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .owl-stage-outer,
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .owl-stage,
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .owl-item {
+  height: 100%;
+}
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .owl-dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .owl-dots .owl-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .owl-dots .owl-dot.active {
+  background: #fff;
+}
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .nav-arrow {
+  z-index: 5;
+}
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .favorite-btn,
+.main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .days-badge {
+  z-index: 5;
 }
 .main-content-section .map-listings-container .listings-wrapper .listings-grid .property-card .property-image-wrapper .days-badge {
   position: absolute;

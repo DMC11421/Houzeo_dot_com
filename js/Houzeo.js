@@ -128,3 +128,26 @@ function closeAllInfoWindows() {
 }
 
 window.initMap = initMap;
+
+$('.property-carousel').each(function () {
+    const startIndex = Number($(this).data('start')) || 0;
+
+    $(this).owlCarousel({
+        items: 1,
+        loop: true,
+        dots: true,
+        nav: false,
+        autoplay: false,
+        smartSpeed: 600,
+        startPosition: startIndex
+    });
+});
+
+// Custom arrows
+$('.nav-arrow-left').click(function () {
+    $(this).siblings('.property-carousel').trigger('prev.owl.carousel');
+});
+
+$('.nav-arrow-right').click(function () {
+    $(this).siblings('.property-carousel').trigger('next.owl.carousel');
+});
