@@ -871,6 +871,14 @@ header {
                     height: 36px;
                     font-size: 12px;
 
+                    &:nth-child(1) {
+                        width: 96px;
+                    }
+
+                    &:nth-child(2) {
+                        width: 78px;
+                    }
+
                     &:nth-child(3),
                     &:nth-child(4) {
                         display: none;

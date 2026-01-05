@@ -681,6 +681,12 @@ header .header-container .header-right .bi-person-circle {
     height: 36px;
     font-size: 12px;
   }
+  .search-section .search-container .filters-wrapper .filter-dropdown:nth-child(1) {
+    width: 96px;
+  }
+  .search-section .search-container .filters-wrapper .filter-dropdown:nth-child(2) {
+    width: 78px;
+  }
   .search-section .search-container .filters-wrapper .filter-dropdown:nth-child(3), .search-section .search-container .filters-wrapper .filter-dropdown:nth-child(4) {
     display: none;
   }
