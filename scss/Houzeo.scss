@@ -786,7 +786,7 @@ header {
         left: 0;
         right: 0;
         width: 100%;
-        z-index: 5;
+        z-index: 10;
 
         .header-container {
             .bi-list {
@@ -822,7 +822,7 @@ header {
         left: 0;
         right: 0;
         width: 100%;
-        z-index: 4;
+        z-index: 10;
 
         .search-container {
             flex-wrap: wrap;
