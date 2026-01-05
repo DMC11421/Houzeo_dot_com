@@ -335,7 +335,7 @@ header {
 
             .filter-dropdown {
                 height: 48px;
-                padding: 0 $space-lg;
+                padding: 0 0;
                 background: $color-white;
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 border-radius: $radius-lg;
@@ -350,13 +350,26 @@ header {
                 white-space: nowrap;
                 width: calc((100% - 48px) / 5);
 
+                button {
+                    padding: 0 $space-lg;
+                }
+
                 &:hover {
                     border-color: $color-primary-light;
-                    color: $color-search-btn;
-                    font-weight: $font-weight-semibold;
+
+                    button {
+                        color: $color-search-btn;
+                        font-weight: $font-weight-semibold;
+                    }
 
                     .dropdown-arrow {
                         color: $color-search-btn;
+                    }
+                }
+
+                .dropdown-menu {
+                    li a {
+                        padding: 5px 10px;
                     }
                 }
 

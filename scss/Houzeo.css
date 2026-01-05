@@ -187,7 +187,7 @@ header .header-container .header-right .bi-person-circle {
 }
 .search-section .search-container .filters-wrapper .filter-dropdown {
   height: 48px;
-  padding: 0 16px;
+  padding: 0 0;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -205,13 +205,21 @@ header .header-container .header-right .bi-person-circle {
   white-space: nowrap;
   width: calc((100% - 48px) / 5);
 }
+.search-section .search-container .filters-wrapper .filter-dropdown button {
+  padding: 0 16px;
+}
 .search-section .search-container .filters-wrapper .filter-dropdown:hover {
   border-color: #2876C1;
+}
+.search-section .search-container .filters-wrapper .filter-dropdown:hover button {
   color: #0B5AA5;
   font-weight: 600;
 }
 .search-section .search-container .filters-wrapper .filter-dropdown:hover .dropdown-arrow {
   color: #0B5AA5;
+}
+.search-section .search-container .filters-wrapper .filter-dropdown .dropdown-menu li a {
+  padding: 5px 10px;
 }
 .search-section .search-container .filters-wrapper .filter-dropdown .dropdown-arrow {
   font-size: 10px;

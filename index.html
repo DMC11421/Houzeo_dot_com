@@ -74,16 +74,51 @@
                 <i class="bi bi-sliders"></i>
             </div>
             <div class="filters-wrapper">
-                <button class="filter-dropdown"><span>For Sale</span> <span class="dropdown-arrow">▼</span></button>
-                <!-- <select class="filter-dropdown" name="" id="">
-                    <option value="For Sale" selected>For Sale</option>
-                    <option value="For Rent">For Rent</option>
-                    <option value="Sold">Sold</option>
-                </select> -->
-                <button class="filter-dropdown"><span>Price</span> <span class="dropdown-arrow">▼</span></button>
-                <button class="filter-dropdown"><span>Beds & Baths</span> <span class="dropdown-arrow">▼</span></button>
-                <button class="filter-dropdown"><span>Property Type</span> <span
-                        class="dropdown-arrow">▼</span></button>
+                <div class="dropdown filter-dropdown">
+                    <button
+                        class="bg-transparent border-0 w-100 h-100 d-flex align-items-center justify-content-between"
+                        data-bs-toggle="dropdown"><span>For Sale</span> <span class="dropdown-arrow">▼</span></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">For Sale</a></li>
+                        <li><a class="dropdown-item" href="#">For Rent</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown filter-dropdown">
+                    <button
+                        class="bg-transparent border-0 w-100 h-100 d-flex align-items-center justify-content-between"
+                        data-bs-toggle="dropdown"><span>Price</span> <span class="dropdown-arrow">▼</span></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">From low to high</a></li>
+                        <li><a class="dropdown-item" href="#">From high to low</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown filter-dropdown">
+                    <button
+                        class="bg-transparent border-0 w-100 h-100 d-flex align-items-center justify-content-between"
+                        data-bs-toggle="dropdown"><span>Beds & Baths</span> <span
+                            class="dropdown-arrow">▼</span></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">4 Beds & 2 Baths</a></li>
+                        <li><a class="dropdown-item" href="#">3 Beds & 2 Baths</a></li>
+                        <li><a class="dropdown-item" href="#">2 Beds & 2 Baths</a></li>
+                        <li><a class="dropdown-item" href="#">1 Bed & 2 Baths</a></li>
+                        <li><a class="dropdown-item" href="#">1 Bed & 1 Bath</a></li>
+                        <li><a class="dropdown-item" href="#">Any</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown filter-dropdown">
+                    <button
+                        class="bg-transparent border-0 w-100 h-100 d-flex align-items-center justify-content-between"
+                        data-bs-toggle="dropdown"><span>Property Type</span> <span
+                            class="dropdown-arrow">▼</span></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Single Family</a></li>
+                        <li><a class="dropdown-item" href="#">Townhouse</a></li>
+                        <li><a class="dropdown-item" href="#">Condo</a></li>
+                        <li><a class="dropdown-item" href="#">Multi Family</a></li>
+                        <li><a class="dropdown-item" href="#">Any</a></li>
+                    </ul>
+                </div>
                 <button class="filters-btn">
                     <i class="bi bi-sliders"></i>
                     Filters
