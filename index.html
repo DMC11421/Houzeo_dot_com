@@ -22,45 +22,82 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="/scss/Houzeo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/scss/Houzeo.css"> -->
+    <link rel="stylesheet" href="/css/Houzeo-tailwind.css">
 
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-            <i class="bi bi-list" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
-                aria-controls="offcanvasMenu"></i>
-            <div class="logo">
-                <img src="/assets/Houzeo_logo.png" alt="Houzeo">
+    <header
+        class="bg-white border-b border-black/20 px-6 max-[431px]:px-4 max-[431px]:fixed max-[431px]:top-0 max-[431px]:left-0 max-[431px]:right-0 max-[431px]:z-10">
+        <div class="mx-auto flex h-[74px] max-w-[1440px] items-center justify-between">
+            <i class="bi bi-list hidden text-[27px] cursor-pointer max-[431px]:block" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu"></i>
+
+            <div>
+                <img src="/assets/Houzeo_logo.png" alt="Houzeo" class="h-[30px] block" />
             </div>
-            <nav class="nav-menu">
-                <a href="#" class="nav-link">Product <span class="dropdown-icon">▼</span></a>
-                <a href="#" class="nav-link">How Houzeo Works</a>
-                <a href="#" class="nav-link">Reviews</a>
-                <a href="#" class="nav-link">Buy <span class="dropdown-icon">▼</span></a>
-                <a href="#" class="nav-link">Sell <span class="dropdown-icon">▼</span></a>
-                <a href="#" class="nav-link">Pricing</a>
-                <a href="#" class="nav-link">Resources <span class="dropdown-icon">▼</span></a>
-                <a href="#" class="nav-link">Sign In</a>
+
+            <nav class="flex flex-1 items-center justify-center gap-7 ml-14 max-[431px]:hidden">
+                <a href="#" class="text-sm font-normal text-black hover:text-[#0E5293] whitespace-nowrap">
+                    Product <span class="text-[10px] ml-1">▼</span>
+                </a>
+                <a href="#" class="text-sm font-normal text-black hover:text-[#0E5293] whitespace-nowrap">
+                    How Houzeo Works
+                </a>
+                <a href="#" class="text-sm font-normal text-black hover:text-[#0E5293] whitespace-nowrap">
+                    Reviews
+                </a>
+                <a href="#" class="text-sm font-normal text-black hover:text-[#0E5293] whitespace-nowrap">
+                    Buy <span class="text-[10px] ml-1">▼</span>
+                </a>
+                <a href="#" class="text-sm font-normal text-black hover:text-[#0E5293] whitespace-nowrap">
+                    Sell <span class="text-[10px] ml-1">▼</span>
+                </a>
+                <a href="#" class="text-sm font-normal text-black hover:text-[#0E5293] whitespace-nowrap">
+                    Pricing
+                </a>
+                <a href="#" class="text-sm font-normal text-black hover:text-[#0E5293] whitespace-nowrap">
+                    Resources <span class="text-[10px] ml-1">▼</span>
+                </a>
+                <a href="#" class="text-sm font-normal text-black hover:text-[#0E5293] whitespace-nowrap">
+                    Sign In
+                </a>
             </nav>
-            <div class="header-right">
-                <div class="phone-info">
-                    <div class="phone-number">(844) 448-0110</div>
-                    <div class="phone-hours">(9am to 8pm CST, Mon-Sat)</div>
+
+            <div class="flex items-center gap-5">
+                <div class="text-left max-[431px]:hidden">
+                    <div class="text-sm font-normal text-black">
+                        (844) 448-0110
+                    </div>
+                    <div class="mt-2 text-xs font-normal text-black">
+                        (9am to 8pm CST, Mon-Sat)
+                    </div>
                 </div>
-                <button class="cta-button">Start Free Listing</button>
-                <i class="bi bi-person-circle"></i>
+
+                <button
+                    class="h-[38px] w-[154px] rounded-lg bg-gradient-to-l from-[#0E5293] to-[#2876C1] text-sm font-medium text-white transition-opacity hover:opacity-90 active:opacity-80 max-[431px]:hidden">
+                    Start Free Listing
+                </button>
+
+                <i class="bi bi-person-circle hidden text-[27px] cursor-pointer max-[431px]:block"></i>
             </div>
         </div>
     </header>
 
-    <section class="search-section">
-        <div class="search-container">
-            <div class="search-field-wrapper">
-                <input type="text" class="search-field" placeholder="Austin, TX" value="Austin, TX">
-                <button class="clear-btn">✕</button>
-                <button class="search-btn">
+    <section
+        class="bg-white px-6 !py-4 shadow-[0_5px_10px_rgba(152,152,152,0.1)]
+    max-[431px]:px-4 max-[431px]:py-5 max-[431px]:rounded-b-2xl max-[431px]:fixed max-[431px]:top-[75px] max-[431px]:left-0 max-[431px]:right-0 max-[431px]:w-full max-[431px]:z-10">
+        <div class="max-w-[1440px] mx-auto flex items-center gap-[16px]
+        max-[431px]:flex-wrap">
+            <div class="relative flex items-center">
+                <input type="text" class="search-field w-[398px] h-12 pr-2 py-2 pl-4 rounded-full border-2 border-transparent bg-[linear-gradient(#ffffff,#ffffff)_padding-box,linear-gradient(90deg,#2876C1_0%,#0E5293_100%)_border-box] font-base font-medium text-sm leading-none text-black outline-none placeholder:text-[#999999]
+                    max-[431px]:w-[calc(100vw-94px)]" placeholder="Austin, TX" value="Austin, TX">
+                <button
+                    class="absolute right-[52px] border-0 bg-transparent cursor-pointer outline-none px-2 py-1 text-sm font-semibold text-black/30 flex items-center justify-center transition-colors duration-200 hover:text-[#666666]">✕</button>
+                <button
+                    class="absolute right-[10px] w-8 h-8 rounded-full border-0 bg-[#0B5AA5] flex items-center justify-center transition-opacity duration-200 hover:opacity-90">
                     <svg width="13" height="13" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z"
@@ -70,84 +107,100 @@
                     </svg>
                 </button>
             </div>
-            <div class="filter-icon-wrapper">
-                <i class="bi bi-sliders"></i>
+            <div
+                class="hidden
+            max-[431px]:flex max-[431px]:h-[38px] max-[431px]:w-[38px] max-[431px]:rounded-full max-[431px]:border max-[431px]:border-[#0B5AA5] max-[431px]:items-center max-[431px]:justify-center max-[431px]:relative">
+                <i class="bi bi-sliders text-[#0B5AA5]"></i>
             </div>
-            <div class="filters-wrapper">
-                <div class="dropdown filter-dropdown">
+            <div class="flex items-center gap-3 flex-1">
+                <div class="dropdown group h-12 w-[calc((100%-48px)/5)] bg-white border border-black/20 rounded-lg font-base font-normal text-sm leading-none text-black cursor-pointer flex items-center justify-between gap-2 whitespace-nowrap transition-all duration-100 hover:!border-[#2876C1]
+                    max-[431px]:w-[calc((100%-24px)/4)] max-[431px]:h-9 max-[431px]:text-xs max-[431px]:w-[96px]">
                     <button
-                        class="bg-transparent border-0 w-100 h-100 d-flex align-items-center justify-content-between"
-                        data-bs-toggle="dropdown"><span>For Sale</span> <span class="dropdown-arrow">▼</span></button>
+                        class="bg-transparent px-[16px] border-0 w-full h-full group-hover:!text-[#0B5AA5] group-hover:font-semibold flex items-center justify-between"
+                        data-bs-toggle="dropdown"><span>For Sale</span> <span
+                            class="text-[10px] text-black group-hover:!text-[#0B5AA5]">▼</span></button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">For Sale</a></li>
-                        <li><a class="dropdown-item" href="#">For Rent</a></li>
+                        <li><a class="dropdown-item px-[10px] py-[5px]" href="#">For Sale</a></li>
+                        <li><a class="dropdown-item px-[10px] py-[5px]" href="#">For Rent</a></li>
                     </ul>
                 </div>
-                <div class="dropdown filter-dropdown">
+                <div class="dropdown group h-12 w-[calc((100%-48px)/5)] bg-white border border-black/20 rounded-lg font-base font-normal text-sm leading-none text-black cursor-pointer flex items-center justify-between gap-2 whitespace-nowrap transition-all duration-100 hover:!border-[#2876C1]
+                    max-[431px]:w-[calc((100%-24px)/4)] max-[431px]:h-9 max-[431px]:text-xs max-[431px]:w-[78px]">
                     <button
-                        class="bg-transparent border-0 w-100 h-100 d-flex align-items-center justify-content-between"
-                        data-bs-toggle="dropdown"><span>Price</span> <span class="dropdown-arrow">▼</span></button>
+                        class="bg-transparent px-[16px] border-0 w-full h-full group-hover:!text-[#0B5AA5] group-hover:font-semibold flex items-center justify-between"
+                        data-bs-toggle="dropdown"><span>Price</span> <span
+                            class="text-[10px] text-black group-hover:!text-[#0B5AA5]">▼</span></button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">From low to high</a></li>
-                        <li><a class="dropdown-item" href="#">From high to low</a></li>
+                        <li><a class="dropdown-item px-[10px] py-[5px]" href="#">From low to high</a></li>
+                        <li><a class="dropdown-item px-[10px] py-[5px]" href="#">From high to low</a></li>
                     </ul>
                 </div>
-                <div class="dropdown filter-dropdown">
+                <div class="dropdown group h-12 w-[calc((100%-48px)/5)] bg-white border border-black/20 rounded-lg font-base font-normal text-sm leading-none text-black cursor-pointer flex items-center justify-between gap-2 whitespace-nowrap transition-all duration-100 hover:!border-[#2876C1]
+                    max-[431px]:w-[calc((100%-24px)/4)] max-[431px]:h-9 max-[431px]:text-xs max-[431px]:hidden">
                     <button
-                        class="bg-transparent border-0 w-100 h-100 d-flex align-items-center justify-content-between"
+                        class="bg-transparent px-4 border-0 w-full h-full group-hover:!text-[#0B5AA5] group-hover:font-semibold flex items-center justify-between"
                         data-bs-toggle="dropdown"><span>Beds & Baths</span> <span
-                            class="dropdown-arrow">▼</span></button>
+                            class="text-[10px] text-black group-hover:!text-[#0B5AA5]">▼</span></button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">4 Beds & 2 Baths</a></li>
-                        <li><a class="dropdown-item" href="#">3 Beds & 2 Baths</a></li>
-                        <li><a class="dropdown-item" href="#">2 Beds & 2 Baths</a></li>
-                        <li><a class="dropdown-item" href="#">1 Bed & 2 Baths</a></li>
-                        <li><a class="dropdown-item" href="#">1 Bed & 1 Bath</a></li>
-                        <li><a class="dropdown-item" href="#">Any</a></li>
+                        <li><a class="dropdown-item px-[10px] py-[5px]" href="#">4 Beds & 2 Baths</a></li>
+                        <li><a class="dropdown-item px-[10px] py-[5px]" href="#">3 Beds & 2 Baths</a></li>
+                        <li><a class="dropdown-item px-[10px] py-[5px]" href="#">2 Beds & 2 Baths</a></li>
+                        <li><a class="dropdown-item px-[10px] py-[5px]" href="#">1 Bed & 2 Baths</a></li>
+                        <li><a class="dropdown-item px-[10px] py-[5px]" href="#">1 Bed & 1 Bath</a></li>
+                        <li><a class="dropdown-item px-[10px] py-[5px]" href="#">Any</a></li>
                     </ul>
                 </div>
-                <div class="dropdown filter-dropdown">
+                <div class="dropdown group h-12 w-[calc((100%-48px)/5)] bg-white border border-black/20 rounded-lg font-base font-normal text-sm leading-none text-black cursor-pointer flex items-center justify-between gap-2 whitespace-nowrap transition-all duration-100 hover:!border-[#2876C1]
+                    max-[431px]:w-[calc((100%-24px)/4)] max-[431px]:h-9 max-[431px]:text-xs max-[431px]:hidden">
                     <button
-                        class="bg-transparent border-0 w-100 h-100 d-flex align-items-center justify-content-between"
+                        class="bg-transparent px-4 border-0 w-full h-full group-hover:!text-[#0B5AA5] group-hover:font-semibold flex items-center justify-between"
                         data-bs-toggle="dropdown"><span>Property Type</span> <span
-                            class="dropdown-arrow">▼</span></button>
+                            class="text-[10px] text-black group-hover:!text-[#0B5AA5]">▼</span></button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Single Family</a></li>
-                        <li><a class="dropdown-item" href="#">Townhouse</a></li>
-                        <li><a class="dropdown-item" href="#">Condo</a></li>
-                        <li><a class="dropdown-item" href="#">Multi Family</a></li>
-                        <li><a class="dropdown-item" href="#">Any</a></li>
+                        <li><a class="dropdown-item px-[10px] py-[5px]" href="#">Single Family</a></li>
+                        <li><a class="dropdown-item px-[10px] py-[5px]" href="#">Townhouse</a></li>
+                        <li><a class="dropdown-item px-[10px] py-[5px]" href="#">Condo</a></li>
+                        <li><a class="dropdown-item px-[10px] py-[5px]" href="#">Multi Family</a></li>
+                        <li><a class="dropdown-item px-[10px] py-[5px]" href="#">Any</a></li>
                     </ul>
                 </div>
-                <button class="filters-btn">
+                <button class="h-12 px-4 bg-white border border-black/20 rounded-lg font-base font-normal text-sm leading-none text-black cursor-pointer flex items-center gap-2 whitespace-nowrap transition-colors duration-200 hover:!border-[#0B5AA5] hover:!text-[#0B5AA5]
+                    max-[431px]:hidden">
                     <i class="bi bi-sliders"></i>
                     Filters
                 </button>
-                <button class="saved-btn">
+                <button class="h-12 px-4 bg-white border border-black/20 font-base font-normal text-sm leading-none text-black cursor-pointer flex items-center gap-2 whitespace-nowrap transition-colors duration-200 hover:!border-[#0B5AA5] hover:!text-[#0B5AA5] font-medium rounded-full
+                    max-[431px]:hidden">
                     <i class="bi bi-pencil-fill"></i>
                     Saved
                 </button>
-                <button class="save-search-btn">
+                <button
+                    class="hidden max-[431px]:block max-[431px]:ml-auto max-[431px]:h-9 max-[431px]:w-[104px] max-[431px]:rounded-full max-[431px]:border max-[431px]:border-white max-[431px]:bg-[#0B5AA5] max-[431px]:text-xs max-[431px]:text-white">
                     Save Search
                 </button>
             </div>
         </div>
     </section>
 
-    <section class="main-content-section">
-        <div class="map-listings-container">
-            <div class="map-wrapper">
-                <div id="map-desktop"></div>
+    <section>
+        <div class="flex h-[calc(100vh-155px)]
+        max-[431px]:h-[calc(100vh-226px)]">
+            <div class="flex-1 relative
+            max-[431px]:hidden">
+                <div id="map-desktop" class="w-full h-full"></div>
             </div>
-            <div class="listings-wrapper">
-                <div class="listings-title">
-                    <h2>Austin, TX real estate & homes for sale</h2>
+            <div class="listings-wrapper flex-1 overflow-y-auto p-6">
+                <div>
+                    <h2 class="font-base font-semibold text-[18px] leading-none text-black mb-2">Austin, TX real estate
+                        & homes for sale</h2>
                 </div>
-                <div class="listings-header">
-                    <p class="listings-count">2,010 Homes</p>
-                    <div class="sort-dropdown">
-                        <span>Sort by:</span>
-                        <select class="sort-select">
+                <div class="flex items-center justify-between mb-6">
+                    <p class="font-base font-medium text-sm leading-none text-black/40 m-0">2,010 Homes
+                    </p>
+                    <div class="flex items-center gap-2">
+                        <span class="font-base font-medium text-sm leading-none text-black/40">Sort by:</span>
+                        <select
+                            class="font-base font-medium text-sm leading-none text-[#0B5AA5] bg-white border-0 rounded-md cursor-pointer outline-none max-w-[120px]">
                             <option>New Listing</option>
                             <option>Price (Low to High)</option>
                             <option>Price (High to Low)</option>
@@ -155,26 +208,35 @@
                         </select>
                     </div>
                 </div>
-                <div class="listings-grid">
-                    <div class="property-card">
-                        <div class="property-image-wrapper">
-                            <div class="owl-carousel property-carousel" data-start="1">
-                                <div class="item">
-                                    <img src="/assets/1.png" alt="Property image 1" />
+                <div class="grid grid-cols-2 gap-6
+                max-[431px]:grid-cols-1 max-[431px]:gap-5">
+                    <div
+                        class="bg-white border border-black/10 rounded-2xl overflow-hidden transition-all duration-200 hover:shadow-[0_0_20px_rgba(0,0,0,0.102)]">
+                        <div class="relative w-full h-[200px] overflow-hidden">
+                            <div class="owl-carousel property-carousel h-full" data-start="1">
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/1.png"
+                                        alt="Property image 1" />
                                 </div>
-                                <div class="item">
-                                    <img src="/assets/2.png" alt="Property image 2" />
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/2.png"
+                                        alt="Property image 2" />
                                 </div>
-                                <div class="item">
-                                    <img src="/assets/3.png" alt="Property image 3" />
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/3.png"
+                                        alt="Property image 3" />
                                 </div>
-                                <div class="item">
-                                    <img src="/assets/4.png" alt="Property image 4" />
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/4.png"
+                                        alt="Property image 4" />
                                 </div>
                             </div>
-                            <div class="days-badge">6 days on Houzeo</div>
-                            <button class="favorite-btn">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            <div
+                                class="absolute top-4 left-4 z-[5] bg-white text-black font-base font-medium text-xs leading-none px-3 py-[6px] rounded-full shadow-[0_4px_10px_rgba(0,0,0,0.15)]">
+                                6 days on Houzeo</div>
+                            <button
+                                class="favorite-btn absolute top-2 right-2 z-[5] w-10 h-10 rounded-full bg-black/50 border-0 bg-transparent cursor-pointer outline-none p-0 flex items-center justify-center transition-colors duration-200 hover:bg-black/50">
+                                <svg class="w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
@@ -182,17 +244,21 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <button class="nav-arrow nav-arrow-left">‹</button>
-                            <button class="nav-arrow nav-arrow-right">›</button>
+                            <button
+                                class="nav-arrow-left absolute top-1/2 -translate-y-1/2 z-[5] w-8 h-8 rounded-full bg-white/90 border-0 cursor-pointer outline-none p-0 text-2xl text-[#333333] flex items-center justify-center transition-colors duration-200 hover:bg-white left-2">‹</button>
+                            <button
+                                class="nav-arrow-right absolute top-1/2 -translate-y-1/2 z-[5] w-8 h-8 rounded-full bg-white/90 border-0 cursor-pointer outline-none p-0 text-2xl text-[#333333] flex items-center justify-center transition-colors duration-200 hover:bg-white right-2">›</button>
                         </div>
-                        <div class="property-details">
-                            <div class="property-type">
-                                <span class="property-badge">
-                                    <span class="status-dot status-house"></span>
-                                    <span class="type-text">House For Sale</span>
+                        <div class="p-[16px]">
+                            <div class="flex items-center justify-between mb-[12px]">
+                                <span class="flex items-center border border-black/10 px-2 py-[5px] rounded-full">
+                                    <span class="w-[10px] h-[10px] rounded-full block mr-[5px] bg-[#00B67B] "></span>
+                                    <span class="font-base font-normal text-xs leading-none text-black flex-1">House
+                                        For Sale</span>
                                 </span>
-                                <span class="view-count">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                <span
+                                    class="flex items-center gap-1 font-base font-normal text-xs leading-none text-black">
+                                    <svg class="w-4 h-4" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z" stroke="currentColor"
                                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -201,40 +267,61 @@
                                     2.3K
                                 </span>
                             </div>
-                            <div class="property-price-spec">
-                                <div class="property-price">$3,349,000</div>
-                                <div class="property-specs">
-                                    <span class="spec"><strong>4</strong> Beds</span>
-                                    <span class="spec"><strong>3</strong> Baths</span>
-                                    <span class="spec"><strong>998</strong> sqft</span>
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="font-base font-semibold text-[18px] leading-[14px] text-[#0B5AA5] mb-[16px]">
+                                    $3,349,000</div>
+                                <div class="flex gap-[16px] mb-[16px]">
+                                    <span
+                                        class="font-base font-normal text-xs text-black/50 flex leading-[14px]"><strong
+                                            class="font-semibold text-sm leading-[14px] text-[#0B5AA5]">4</strong>
+                                        Beds</span>
+                                    <span
+                                        class="font-base font-normal text-xs text-black/50 flex leading-[14px]"><strong
+                                            class="font-semibold text-sm leading-[14px] text-[#0B5AA5]">3</strong>
+                                        Baths</span>
+                                    <span
+                                        class="font-base font-normal text-xs text-black/50 flex leading-[14px]"><strong
+                                            class="font-semibold text-sm leading-[14px] text-[#0B5AA5]">998</strong>
+                                        sqft</span>
                                 </div>
                             </div>
-                            <div class="property-address"><strong>2856 Meadow Park Ave,</strong> Henderson, NV 89052
+                            <div class="font-base font-normal text-xs leading-none text-[#333333] mb-2">
+                                <strong>2856 Meadow Park Ave,</strong> Henderson, NV 89052
                             </div>
-                            <div class="property-agent">Nashville (Real Tracs Mid) MLS-TN as distributed by MLS GRID
+                            <div class="font-base font-normal text-xs leading-none text-black/50">
+                                Nashville (Real Tracs Mid) MLS-TN as distributed by MLS GRID
                             </div>
                         </div>
                     </div>
 
-                    <div class="property-card">
-                        <div class="property-image-wrapper">
-                            <div class="owl-carousel property-carousel" data-start="2">
-                                <div class="item">
-                                    <img src="/assets/1.png" alt="Property image 1" />
+                    <div
+                        class="bg-white border border-black/10 rounded-2xl overflow-hidden transition-all duration-200 hover:shadow-[0_0_20px_rgba(0,0,0,0.102)]">
+                        <div class="relative w-full h-[200px] overflow-hidden">
+                            <div class="owl-carousel property-carousel h-full" data-start="2">
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/1.png"
+                                        alt="Property image 1" />
                                 </div>
-                                <div class="item">
-                                    <img src="/assets/2.png" alt="Property image 2" />
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/2.png"
+                                        alt="Property image 2" />
                                 </div>
-                                <div class="item">
-                                    <img src="/assets/3.png" alt="Property image 3" />
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/3.png"
+                                        alt="Property image 3" />
                                 </div>
-                                <div class="item">
-                                    <img src="/assets/4.png" alt="Property image 4" />
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/4.png"
+                                        alt="Property image 4" />
                                 </div>
                             </div>
-                            <div class="days-badge">12 days on Houzeo</div>
-                            <button class="favorite-btn">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            <div
+                                class="absolute top-4 left-4 z-[5] bg-white text-black font-base font-medium text-xs leading-none px-3 py-[6px] rounded-full shadow-[0_4px_10px_rgba(0,0,0,0.15)]">
+                                12 days on Houzeo</div>
+                            <button
+                                class="favorite-btn absolute top-2 right-2 z-[5] w-10 h-10 rounded-full bg-black/50 border-0 bg-transparent cursor-pointer outline-none p-0 flex items-center justify-center transition-colors duration-200 hover:bg-black/50">
+                                <svg class="w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
@@ -242,17 +329,21 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <button class="nav-arrow nav-arrow-left">‹</button>
-                            <button class="nav-arrow nav-arrow-right">›</button>
+                            <button
+                                class="nav-arrow-left absolute top-1/2 -translate-y-1/2 z-[5] w-8 h-8 rounded-full bg-white/90 border-0 cursor-pointer outline-none p-0 text-2xl text-[#333333] flex items-center justify-center transition-colors duration-200 hover:bg-white left-2">‹</button>
+                            <button
+                                class="nav-arrow-right absolute top-1/2 -translate-y-1/2 z-[5] w-8 h-8 rounded-full bg-white/90 border-0 cursor-pointer outline-none p-0 text-2xl text-[#333333] flex items-center justify-center transition-colors duration-200 hover:bg-white right-2">›</button>
                         </div>
-                        <div class="property-details">
-                            <div class="property-type">
-                                <span class="property-badge">
-                                    <span class="status-dot status-house"></span>
-                                    <span class="type-text">Condo For Sale</span>
+                        <div class="p-[16px]">
+                            <div class="flex items-center justify-between mb-[12px]">
+                                <span class="flex items-center border border-black/10 px-2 py-[5px] rounded-full">
+                                    <span class="w-[10px] h-[10px] rounded-full block mr-[5px] bg-[#00B67B] "></span>
+                                    <span class="font-base font-normal text-xs leading-none text-black flex-1">Condo
+                                        For Sale</span>
                                 </span>
-                                <span class="view-count">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                <span
+                                    class="flex items-center gap-1 font-base font-normal text-xs leading-none text-black">
+                                    <svg class="w-4 h-4" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z" stroke="currentColor"
                                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -261,39 +352,60 @@
                                     2.3K
                                 </span>
                             </div>
-                            <div class="property-price-spec">
-                                <div class="property-price">$3,349,000</div>
-                                <div class="property-specs">
-                                    <span class="spec"><strong>4</strong> Beds</span>
-                                    <span class="spec"><strong>3</strong> Baths</span>
-                                    <span class="spec"><strong>998</strong> sqft</span>
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="font-base font-semibold text-[18px] leading-[14px] text-[#0B5AA5] mb-[16px]">
+                                    $3,349,000</div>
+                                <div class="flex gap-[16px] mb-[16px]">
+                                    <span
+                                        class="font-base font-normal text-xs text-black/50 flex leading-[14px]"><strong
+                                            class="font-semibold text-sm leading-[14px] text-[#0B5AA5]">4</strong>
+                                        Beds</span>
+                                    <span
+                                        class="font-base font-normal text-xs text-black/50 flex leading-[14px]"><strong
+                                            class="font-semibold text-sm leading-[14px] text-[#0B5AA5]">3</strong>
+                                        Baths</span>
+                                    <span
+                                        class="font-base font-normal text-xs text-black/50 flex leading-[14px]"><strong
+                                            class="font-semibold text-sm leading-[14px] text-[#0B5AA5]">998</strong>
+                                        sqft</span>
                                 </div>
                             </div>
-                            <div class="property-address"><strong>2856 Meadow Park Ave,</strong> Henderson, NV 89052
+                            <div class="font-base font-normal text-xs leading-none text-[#333333] mb-2">
+                                <strong>2856 Meadow Park Ave,</strong> Henderson, NV 89052
                             </div>
-                            <div class="property-agent">Sotheby's International Realty</div>
+                            <div class="font-base font-normal text-xs leading-none text-black/50">
+                                Sotheby's International Realty</div>
                         </div>
                     </div>
 
-                    <div class="property-card">
-                        <div class="property-image-wrapper">
-                            <div class="owl-carousel property-carousel" data-start="3">
-                                <div class="item">
-                                    <img src="/assets/1.png" alt="Property image 1" />
+                    <div
+                        class="bg-white border border-black/10 rounded-2xl overflow-hidden transition-all duration-200 hover:shadow-[0_0_20px_rgba(0,0,0,0.102)]">
+                        <div class="relative w-full h-[200px] overflow-hidden">
+                            <div class="owl-carousel property-carousel h-full" data-start="3">
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/1.png"
+                                        alt="Property image 1" />
                                 </div>
-                                <div class="item">
-                                    <img src="/assets/2.png" alt="Property image 2" />
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/2.png"
+                                        alt="Property image 2" />
                                 </div>
-                                <div class="item">
-                                    <img src="/assets/3.png" alt="Property image 3" />
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/3.png"
+                                        alt="Property image 3" />
                                 </div>
-                                <div class="item">
-                                    <img src="/assets/4.png" alt="Property image 4" />
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/4.png"
+                                        alt="Property image 4" />
                                 </div>
                             </div>
-                            <div class="days-badge">10 days on Houzeo</div>
-                            <button class="favorite-btn">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            <div
+                                class="absolute top-4 left-4 z-[5] bg-white text-black font-base font-medium text-xs leading-none px-3 py-[6px] rounded-full shadow-[0_4px_10px_rgba(0,0,0,0.15)]">
+                                10 days on Houzeo</div>
+                            <button
+                                class="favorite-btn absolute top-2 right-2 z-[5] w-10 h-10 rounded-full bg-black/50 border-0 bg-transparent cursor-pointer outline-none p-0 flex items-center justify-center transition-colors duration-200 hover:bg-black/50">
+                                <svg class="w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
@@ -301,17 +413,22 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <button class="nav-arrow nav-arrow-left">‹</button>
-                            <button class="nav-arrow nav-arrow-right">›</button>
+                            <button
+                                class="nav-arrow-left absolute top-1/2 -translate-y-1/2 z-[5] w-8 h-8 rounded-full bg-white/90 border-0 cursor-pointer outline-none p-0 text-2xl text-[#333333] flex items-center justify-center transition-colors duration-200 hover:bg-white left-2">‹</button>
+                            <button
+                                class="nav-arrow-right absolute top-1/2 -translate-y-1/2 z-[5] w-8 h-8 rounded-full bg-white/90 border-0 cursor-pointer outline-none p-0 text-2xl text-[#333333] flex items-center justify-center transition-colors duration-200 hover:bg-white right-2">›</button>
                         </div>
-                        <div class="property-details">
-                            <div class="property-type">
-                                <span class="property-badge">
-                                    <span class="status-dot status-house"></span>
-                                    <span class="type-text">Multi-family home For Sale</span>
+                        <div class="p-[16px]">
+                            <div class="flex items-center justify-between mb-[12px]">
+                                <span class="flex items-center border border-black/10 px-2 py-[5px] rounded-full">
+                                    <span class="w-[10px] h-[10px] rounded-full block mr-[5px] bg-[#00B67B] "></span>
+                                    <span
+                                        class="font-base font-normal text-xs leading-none text-black flex-1">Multi-family
+                                        home For Sale</span>
                                 </span>
-                                <span class="view-count">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                <span
+                                    class="flex items-center gap-1 font-base font-normal text-xs leading-none text-black">
+                                    <svg class="w-4 h-4" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z" stroke="currentColor"
                                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -320,40 +437,61 @@
                                     2.3K
                                 </span>
                             </div>
-                            <div class="property-price-spec">
-                                <div class="property-price">$3,349,000</div>
-                                <div class="property-specs">
-                                    <span class="spec"><strong>4</strong> Beds</span>
-                                    <span class="spec"><strong>3</strong> Baths</span>
-                                    <span class="spec"><strong>998</strong> sqft</span>
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="font-base font-semibold text-[18px] leading-[14px] text-[#0B5AA5] mb-[16px]">
+                                    $3,349,000</div>
+                                <div class="flex gap-[16px] mb-[16px]">
+                                    <span
+                                        class="font-base font-normal text-xs text-black/50 flex leading-[14px]"><strong
+                                            class="font-semibold text-sm leading-[14px] text-[#0B5AA5]">4</strong>
+                                        Beds</span>
+                                    <span
+                                        class="font-base font-normal text-xs text-black/50 flex leading-[14px]"><strong
+                                            class="font-semibold text-sm leading-[14px] text-[#0B5AA5]">3</strong>
+                                        Baths</span>
+                                    <span
+                                        class="font-base font-normal text-xs text-black/50 flex leading-[14px]"><strong
+                                            class="font-semibold text-sm leading-[14px] text-[#0B5AA5]">998</strong>
+                                        sqft</span>
                                 </div>
                             </div>
-                            <div class="property-address"><strong>2856 Meadow Park Ave,</strong> Henderson, NV 89052
+                            <div class="font-base font-normal text-xs leading-none text-[#333333] mb-2">
+                                <strong>2856 Meadow Park Ave,</strong> Henderson, NV 89052
                             </div>
-                            <div class="property-agent">Nashville (Real Tracs Mid) MLS-TN as distributed by MLS GRID
+                            <div class="font-base font-normal text-xs leading-none text-black/50">
+                                Nashville (Real Tracs Mid) MLS-TN as distributed by MLS GRID
                             </div>
                         </div>
                     </div>
 
-                    <div class="property-card">
-                        <div class="property-image-wrapper">
-                            <div class="owl-carousel property-carousel" data-start="4">
-                                <div class="item">
-                                    <img src="/assets/1.png" alt="Property image 1" />
+                    <div
+                        class="bg-white border border-black/10 rounded-2xl overflow-hidden transition-all duration-200 hover:shadow-[0_0_20px_rgba(0,0,0,0.102)]">
+                        <div class="relative w-full h-[200px] overflow-hidden">
+                            <div class="owl-carousel property-carousel h-full" data-start="4">
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/1.png"
+                                        alt="Property image 1" />
                                 </div>
-                                <div class="item">
-                                    <img src="/assets/2.png" alt="Property image 2" />
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/2.png"
+                                        alt="Property image 2" />
                                 </div>
-                                <div class="item">
-                                    <img src="/assets/3.png" alt="Property image 3" />
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/3.png"
+                                        alt="Property image 3" />
                                 </div>
-                                <div class="item">
-                                    <img src="/assets/4.png" alt="Property image 4" />
+                                <div class="item h-[200px]">
+                                    <img class="w-full h-full object-cover block" src="/assets/4.png"
+                                        alt="Property image 4" />
                                 </div>
                             </div>
-                            <div class="days-badge">10 days on Houzeo</div>
-                            <button class="favorite-btn">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            <div
+                                class="absolute top-4 left-4 z-[5] bg-white text-black font-base font-medium text-xs leading-none px-3 py-[6px] rounded-full shadow-[0_4px_10px_rgba(0,0,0,0.15)]">
+                                10 days on Houzeo</div>
+                            <button
+                                class="favorite-btn absolute top-2 right-2 z-[5] w-10 h-10 rounded-full bg-black/50 border-0 bg-transparent cursor-pointer outline-none p-0 flex items-center justify-center transition-colors duration-200 hover:bg-black/50">
+                                <svg class="w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
@@ -361,17 +499,21 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <button class="nav-arrow nav-arrow-left">‹</button>
-                            <button class="nav-arrow nav-arrow-right">›</button>
+                            <button
+                                class="nav-arrow-left absolute top-1/2 -translate-y-1/2 z-[5] w-8 h-8 rounded-full bg-white/90 border-0 cursor-pointer outline-none p-0 text-2xl text-[#333333] flex items-center justify-center transition-colors duration-200 hover:bg-white left-2">‹</button>
+                            <button
+                                class="nav-arrow-right absolute top-1/2 -translate-y-1/2 z-[5] w-8 h-8 rounded-full bg-white/90 border-0 cursor-pointer outline-none p-0 text-2xl text-[#333333] flex items-center justify-center transition-colors duration-200 hover:bg-white right-2">›</button>
                         </div>
-                        <div class="property-details">
-                            <div class="property-type">
-                                <span class="property-badge">
-                                    <span class="status-dot status-house"></span>
-                                    <span class="type-text">House For Sale</span>
+                        <div class="p-[16px]">
+                            <div class="flex items-center justify-between mb-[12px]">
+                                <span class="flex items-center border border-black/10 px-2 py-[5px] rounded-full">
+                                    <span class="w-[10px] h-[10px] rounded-full block mr-[5px] bg-[#00B67B] "></span>
+                                    <span class="font-base font-normal text-xs leading-none text-black flex-1">House
+                                        For Sale</span>
                                 </span>
-                                <span class="view-count">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                <span
+                                    class="flex items-center gap-1 font-base font-normal text-xs leading-none text-black">
+                                    <svg class="w-4 h-4" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z" stroke="currentColor"
                                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -380,39 +522,55 @@
                                     2.3K
                                 </span>
                             </div>
-                            <div class="property-price-spec">
-                                <div class="property-price">$3,349,000</div>
-                                <div class="property-specs">
-                                    <span class="spec"><strong>4</strong> Beds</span>
-                                    <span class="spec"><strong>3</strong> Baths</span>
-                                    <span class="spec"><strong>998</strong> sqft</span>
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="font-base font-semibold text-[18px] leading-[14px] text-[#0B5AA5] mb-[16px]">
+                                    $3,349,000</div>
+                                <div class="flex gap-[16px] mb-[16px]">
+                                    <span
+                                        class="font-base font-normal text-xs text-black/50 flex leading-[14px]"><strong
+                                            class="font-semibold text-sm leading-[14px] text-[#0B5AA5]">4</strong>
+                                        Beds</span>
+                                    <span
+                                        class="font-base font-normal text-xs text-black/50 flex leading-[14px]"><strong
+                                            class="font-semibold text-sm leading-[14px] text-[#0B5AA5]">3</strong>
+                                        Baths</span>
+                                    <span
+                                        class="font-base font-normal text-xs text-black/50 flex leading-[14px]"><strong
+                                            class="font-semibold text-sm leading-[14px] text-[#0B5AA5]">998</strong>
+                                        sqft</span>
                                 </div>
                             </div>
-                            <div class="property-address"><strong>2856 Meadow Park Ave,</strong> Henderson, NV 89052
+                            <div class="font-base font-normal text-xs leading-none text-[#333333] mb-2">
+                                <strong>2856 Meadow Park Ave,</strong> Henderson, NV 89052
                             </div>
-                            <div class="property-agent">Nashville (Real Tracs Mid) MLS-TN as distributed by MLS GRID
+                            <div class="font-base font-normal text-xs leading-none text-black/50">
+                                Nashville (Real Tracs Mid) MLS-TN as distributed by MLS GRID
                             </div>
                         </div>
                     </div>
                 </div>
-                <hr>
-                <footer>
+                <hr class="border-black/20 my-[16px]">
+                <footer class="flex justify-center text-xs">
                     <p>Copyright: @ 2025 Houzeo. All rights reserved.</p>
                 </footer>
-                <button class="map-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMap"
+                <button
+                    class="hidden 
+                max-[431px]:block max-[431px]:fixed max-[431px]:bottom-6 max-[431px]:left-[38.5%] max-[431px]:h-12 max-[431px]:w-[100px] max-[431px]:rounded-full max-[431px]:bg-[#0B5AA5] max-[431px]:text-white max-[431px]:z-10 max-[431px]:shadow-[0_4px_14px_rgba(11,90,165,0.5)]"
+                    type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMap"
                     aria-controls="offcanvasMap">Map <i class="bi bi-map ms-1"></i></button>
             </div>
         </div>
     </section>
 
-    <div class="offcanvas offcanvas-bottom" tabindex="-1" data-bs-backdrop="static" id="offcanvasMap"
-        aria-labelledby="offcanvasMapLabel">
+    <div class="offcanvas offcanvas-bottom !h-[calc(100vh-150px)]" tabindex="-1" data-bs-backdrop="static"
+        id="offcanvasMap" aria-labelledby="offcanvasMapLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasMapLabel">Property Map</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body small">
-            <div id="map-mobile"></div>
+            <div id="map-mobile" class="w-full h-full"></div>
         </div>
     </div>
 
@@ -423,14 +581,28 @@
         </div>
         <div class="offcanvas-body">
             <nav class="nav-menu">
-                <a href="#" class="nav-link">Product <span class="dropdown-icon">▼</span></a>
-                <a href="#" class="nav-link">How Houzeo Works</a>
-                <a href="#" class="nav-link">Reviews</a>
-                <a href="#" class="nav-link">Buy <span class="dropdown-icon">▼</span></a>
-                <a href="#" class="nav-link">Sell <span class="dropdown-icon">▼</span></a>
-                <a href="#" class="nav-link">Pricing</a>
-                <a href="#" class="nav-link">Resources <span class="dropdown-icon">▼</span></a>
-                <a href="#" class="nav-link">Sign In</a>
+                <a href="#"
+                    class="block max-[431px]:py-[10px] max-[431px]:px-[1px] max-[431px]:!border-b max-[431px]:!border-black/10 hover:text-[#0B5AA5] hover:!border-[#0B5AA5] cursor-pointer">Product
+                    <span class="dropdown-icon">▼</span></a>
+                <a href="#"
+                    class="block max-[431px]:py-[10px] max-[431px]:px-[1px] max-[431px]:!border-b max-[431px]:!border-black/10 hover:text-[#0B5AA5] hover:!border-[#0B5AA5] cursor-pointer">How
+                    Houzeo Works</a>
+                <a href="#"
+                    class="block max-[431px]:py-[10px] max-[431px]:px-[1px] max-[431px]:!border-b max-[431px]:!border-black/10 hover:text-[#0B5AA5] hover:!border-[#0B5AA5] cursor-pointer">Reviews</a>
+                <a href="#"
+                    class="block max-[431px]:py-[10px] max-[431px]:px-[1px] max-[431px]:!border-b max-[431px]:!border-black/10 hover:text-[#0B5AA5] hover:!border-[#0B5AA5] cursor-pointer">Buy
+                    <span class="dropdown-icon">▼</span></a>
+                <a href="#"
+                    class="block max-[431px]:py-[10px] max-[431px]:px-[1px] max-[431px]:!border-b max-[431px]:!border-black/10 hover:text-[#0B5AA5] hover:!border-[#0B5AA5] cursor-pointer">Sell
+                    <span class="dropdown-icon">▼</span></a>
+                <a href="#"
+                    class="block max-[431px]:py-[10px] max-[431px]:px-[1px] max-[431px]:!border-b max-[431px]:!border-black/10 hover:text-[#0B5AA5] hover:!border-[#0B5AA5] cursor-pointer">Pricing</a>
+                <a href="#"
+                    class="block max-[431px]:py-[10px] max-[431px]:px-[1px] max-[431px]:!border-b max-[431px]:!border-black/10 hover:text-[#0B5AA5] hover:!border-[#0B5AA5] cursor-pointer">Resources
+                    <span class="dropdown-icon">▼</span></a>
+                <a href="#"
+                    class="block max-[431px]:py-[10px] max-[431px]:px-[1px] max-[431px]:!border-b max-[431px]:!border-black/10 hover:text-[#0B5AA5] hover:!border-[#0B5AA5] cursor-pointer">Sign
+                    In</a>
             </nav>
         </div>
     </div>
